@@ -1,0 +1,60 @@
+@import url('@common/common.less');
+.mx-stepper{
+    display: inline-flex;
+    align-items: center;
+    background: @WHITE_COLOR;
+    &.mx-stepper-disabled{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background: rgba(0,0,0,0);
+        }
+        .add,.minus,.inputs,.input{
+            opacity: 0.5;
+        }
+    }
+    .add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64rpx;
+        height: 64rpx;
+        background: @BG_COLOR;
+    }
+    .minus{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64rpx;
+        height: 64rpx;
+        background: @BG_COLOR;
+    }
+    .inputs{
+        width: 112rpx;
+        height: 64rpx;
+        margin: 0 2rpx;
+        background: #f4f6f7;
+    }
+    .input{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 112rpx;
+        height: 64rpx;
+        background: #f4f6f7;
+        color: #040A23;
+        font-family: Avenir-Book, Avenir;
+        text-align: center;
+    }
+    .minus-disabled,
+    .add-disabled,
+    .input-disabled{
+        opacity: 0.5;
+    }
+}

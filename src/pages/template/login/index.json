@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "nav-bar": "@components/navBar/index",
+        "copyright": "@components/copyright/index"
+    }
+}

@@ -1,0 +1,166 @@
+<view class="pageDemo">
+    <mx-nav title="标签页组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>标签页组件（示例）</title>
+    <desc>组件名称：Tabs</desc>
+    <desc>用于内容组之间进行导航切换。</desc>
+    <desc>支持 Tabs 项左对齐、宽度均分</desc>
+    <desc>支持自定义文本色、背景色</desc>
+    <desc>支持带小红点、带数字显示</desc>
+    <desc>支持排序、升序、降序</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">数据项</title>
+        <desc>属性：options[x].text，Tab项名称</desc>
+        <desc>属性：options[x].value，Tab项值</desc>
+        <desc>属性：options[x].iconName，图标名称</desc>
+        <desc>属性：options[x].iconColor，图标颜色</desc>
+        <desc>属性：options[x].iconUrl，自定义图片</desc>
+        <desc>属性：options[x].iconSize，图标大小</desc>
+        <desc>属性：options[x].dot，小红点</desc>
+        <desc>属性：options[x].num，带数字，需要配合 isShowNum 使用</desc>
+        <desc>属性：options[x].sort，排序，default / asc / desc</desc>
+
+        <!-- 基础使用 -->
+        <mx-tabs options="{{options}}" bind:tabs_tap="handleClick" />
+    </wrap>
+
+    <line />
+
+    <wrap>
+        <title type="h2">指定选中项</title>
+        <desc>属性：current，从0开始</desc>
+
+        <mx-tabs options="{{options}}" current="1" />
+    </wrap>
+    <line />
+    
+    <wrap>
+        <title type="h2">宽度均分</title>
+        <desc>属性：average：true / false</desc>
+
+        <mx-tabs options="{{options}}" current="1" average />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">主题</title>
+        <desc>深色主题</desc>
+        <desc>属性：theme="durk"</desc>
+        <mx-tabs options="{{options}}" theme="durk" />
+
+        <line />
+
+        <desc>浅色主题</desc>
+        <desc>属性：theme="light"</desc>
+        <mx-tabs options="{{options}}" theme="light" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">选项超出</title>
+        <desc>深色主题</desc>
+        <mx-tabs options="{{options2}}" theme="durk" />
+
+        <line />
+
+        <desc>浅色主题</desc>
+        <mx-tabs options="{{options2}}" theme="light" average />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">带红点</title>
+        <desc>属性：options[x].dot：true / false</desc>
+
+        <desc>深色主题</desc>
+        <mx-tabs options="{{options3}}" theme="durk" average />
+
+        <line />
+
+        <desc>浅色主题</desc>
+        <mx-tabs options="{{options3}}" theme="light" average />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">带数字</title>
+        <desc>属性：options[x].num</desc>
+        <desc>属性：isShowNum：true / false</desc>
+
+        <desc>深色主题</desc>
+        <mx-tabs options="{{options4}}" theme="durk" isShowNum />
+
+        <line />
+
+        <desc>浅色主题</desc>
+        <mx-tabs options="{{options4}}" theme="light" isShowNum />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义文本色</title>
+        <desc>属性：textColor</desc>
+        <desc>属性：textCurrentColor</desc>
+
+        <mx-tabs options="{{options4}}" textColor="#999" textCurrentColor="#1677ff" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义文本字号</title>
+        <desc>属性：textSize，默认：32</desc>
+        <desc>属性：textCurrentSize，默认：32</desc>
+
+        <mx-tabs options="{{options4}}" textSize="28" textCurrentSize="34" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义背景色</title>
+        <desc>属性：bgColor</desc>
+
+        <mx-tabs options="{{options4}}" bgColor="#e4b856" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">选项带图标</title>
+        <desc>属性：options[x].iconName</desc>
+        <desc>属性：options[x].iconColor</desc>
+        <desc>属性：options[x].iconSize，默认32，不带单位</desc>
+
+        <mx-tabs options="{{options5}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">选项图标自定义图片</title>
+        <desc>属性：options[x].iconUrl</desc>
+        <desc>属性：options[x].iconSize，默认32，不带单位</desc>
+
+        <mx-tabs options="{{options6}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">排序</title>
+        <desc>属性：options[x].sort：default / asc / desc</desc>
+
+        <mx-tabs options="{{options7}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">下划线样式</title>
+        <desc>属性：lineMode：short / full</desc>
+
+        <mx-tabs options="{{options}}" lineMode="full" />
+    </wrap>
+    <line />
+</view>

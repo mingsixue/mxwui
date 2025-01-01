@@ -1,0 +1,157 @@
+<view class="pageDemo">
+    <mx-nav title="基础列表组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>基础列表组件（示例）</title>
+    <desc>组件名称：ListBasic</desc>
+    <desc>常用于个人中心、设置、通用信息列表等场景。</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基本用法</title>
+        <mx-list-basic label="标签文本" bind:list_basic_content="handleContent" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文本</title>
+        <desc>属性：label</desc>
+        <desc>属性：labelColor</desc>
+        <desc>属性：labelAlign，对齐方式，left / center / right</desc>
+
+        <mx-list-basic label="标签文本" />
+        <mx-list-basic label="标签文本" labelColor="#CA0E2D" />
+        <mx-list-basic label="居中：" leftWidth="200" labelAlign="center" />
+        <mx-list-basic label="居右：" leftWidth="200" labelAlign="right" />
+    </wrap>
+    <line />
+    
+    <wrap>
+        <title type="h2">左侧自定义宽度</title>
+        <desc>属性：leftWidth，数字，不带单位</desc>
+
+        <mx-list-basic label="左侧自定义宽度" leftWidth="280" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否必填</title>
+        <desc>属性：required</desc>
+        <desc>属性：requiredPosition，星号位置：left / right</desc>
+
+        <mx-list-basic label="标签文本" required />
+        <mx-list-basic label="标签文本" required requiredPosition="left" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签前图标</title>
+        <desc>属性：firstIcon</desc>
+        <desc>属性：firstIcon.iconName</desc>
+        <desc>属性：firstIcon.iconColor</desc>
+        <desc>属性：firstIcon.iconUrl</desc>
+        <desc>属性：firstIcon.iconSize</desc>
+
+        <mx-list-basic label="标签前图标" firstIcon="{{firstIcon}}" />
+
+        <mx-list-basic label="标签前图标自定义" firstIcon="{{firstIcon2}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签后图标</title>
+        <desc>属性：lastIcon</desc>
+        <desc>属性：lastIcon.iconName</desc>
+        <desc>属性：lastIcon.iconColor</desc>
+        <desc>属性：lastIcon.iconUrl</desc>
+        <desc>属性：lastIcon.iconSize</desc>
+
+        <mx-list-basic label="标签后图标" lastIcon="{{lastIcon}}" />
+
+        <mx-list-basic label="标签后图标自定义" lastIcon="{{lastIcon2}}" />
+    </wrap>
+    <line />
+
+   <wrap>
+        <title type="h2">是否显示右箭头</title>
+        <desc>属性：arrows</desc>
+
+        <mx-list-basic label="不显示箭头" arrows="{{false}}" />
+        <mx-list-basic label="显示箭头" arrows="{{true}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示小红点</title>
+        <desc>属性：dot</desc>
+
+        <mx-list-basic label="标签文本" arrows="{{false}}" dot />
+        <mx-list-basic label="标签文本" dot />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">显示数量</title>
+        <desc>属性：num</desc>
+
+        <mx-list-basic label="标签文本" arrows num="9" />
+        <mx-list-basic label="标签文本" arrows num="99" />
+        <mx-list-basic label="标签文本" arrows num="999" />
+        <mx-list-basic label="标签文本" arrows num="99+" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">右侧内容</title>
+        <desc>属性：content</desc>
+        <desc>属性：contentColor</desc>
+
+        <mx-list-basic label="标签文本" content="这是右侧内容" arrows="{{false}}" />
+        <mx-list-basic label="标签文本" content="这是右侧内容" />
+        <mx-list-basic label="标签文本" content="这是右侧内容" contentColor="#CA0E2D" />
+        <mx-list-basic label="标签文本" content="这是右侧内容这是很多的右侧内容这是超级多的右侧内容" arrows="{{false}}" />
+        <mx-list-basic label="标签文本" content="这是右侧内容这是很多的右侧内容这是超级多的右侧内容" />
+        <mx-list-basic label="极限内容" required firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" content="这是右侧内容这是很多的右侧内容这是超级多的" arrows />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">右侧内容左对齐</title>
+        <desc>属性：isLeft</desc>
+
+        <mx-list-basic label="标签文本" content="这是右侧内容" isLeft arrows="{{false}}" />
+        <mx-list-basic label="标签文本" content="这是右侧内容" isLeft />
+        <mx-list-basic label="标签文本" content="这是右侧内容这是很多的右侧内容这是超级多的右侧内容" isLeft />
+        <mx-list-basic label="极限内容" required firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" content="这是右侧内容这是很多的右侧内容这是超级多的" arrows isLeft />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述</title>
+        <desc>属性：desc</desc>
+        <desc>属性：descColor</desc>
+
+        <mx-list-basic label="标签文本" desc="描述内容描述内容描述内容" arrows />
+
+        <mx-list-basic label="标签文本" desc="描述内容描述内容描述内容" descColor="#CA0E2D" arrows />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示分隔线</title>
+        <desc>属性：showLine</desc>
+
+        <mx-list-basic label="标签文本" showLine="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:list_basic_firstIcon，标签前图标点击</desc>
+        <desc>事件：bind:list_basic_lastIcon，标签后图标点击</desc>
+        <desc>事件：bind:list_basic_content，右侧内容区点击</desc>
+
+        <mx-list-basic label="事件" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" content="有三种点击事件" arrows bind:list_basic_firstIcon="handleFirstIcon" bind:list_basic_lastIcon="handleLastIcon" bind:list_basic_content="handleContent" />
+    </wrap>
+    <line />
+
+</view>

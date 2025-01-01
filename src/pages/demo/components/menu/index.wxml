@@ -1,0 +1,76 @@
+<view class="pageDemo">
+    <mx-nav title="底部导航组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>底部导航组件（示例）</title>
+    <desc>组件名称：Menu</desc>
+    <desc>页面底部导航，适用于在不同页面之间进行切换</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基本用法</title>
+
+        <mx-menu options="{{options}}" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">指定选中项</title>
+        <desc>属性：current，从0开始</desc>
+
+        <mx-menu options="{{options}}" current="1" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图标</title>
+        <desc>属性：options[x].iconName</desc>
+        
+        <mx-menu options="{{options2}}" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义颜色</title>
+        <desc>属性：options[x].color</desc>
+
+        <mx-menu options="{{options3}}" color="#777" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义选中颜色</title>
+        <desc>属性：options[x].selectColor</desc>
+        
+        <mx-menu options="{{options3}}" selectColor="#1677FF" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示小红点</title>
+        <desc>属性：options[x].dot</desc>
+
+        <mx-menu options="{{options4}}" isFixed="{{false}}" />
+    </wrap>
+     <line />
+
+    <wrap>
+        <title type="h2">判断是否要登录</title>
+        <desc>属性：options[x].isLogin</desc>
+        <desc>事件：bind:menu_tap</desc>
+        <desc>不再默认跳转，会返回 menu_tap 事件，请自行处理登录校验和跳转逻辑</desc>
+
+        <mx-menu options="{{options5}}" bind:menu_tap="handleTap" isFixed="{{false}}" />
+    </wrap>
+
+    <wrap>
+        <title type="h2">文本字号</title>
+        <desc>属性：textSize，默认28，不带单位，使用rpx</desc>
+
+        <mx-menu options="{{options6}}" textSize="32" bind:menu_tap="handleTap" isFixed="{{false}}" />
+    </wrap>
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex，默认：518</desc>
+    </wrap>
+</view>

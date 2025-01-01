@@ -1,0 +1,62 @@
+<view class="pageDemo">
+    <mx-nav title="上传组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>上传组件（示例）</title>
+    <desc>组件名称：Upload</desc>
+    <desc>上传图片或视频。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">上传类型</title>
+        <desc>属性：type：image 图片、video 视频、file 文件</desc>
+
+        <desc>上传图片</desc>
+        <view class="cons">
+            <mx-upload type="image" />
+
+            <view class="space"></view>
+
+            <mx-upload type="image" src="https://cdn.weipaitang.com/sky/fapai/tupian/image/20240725/1c7556daa023440d9e949d24a3b0e35e-W2000H2000" />
+        </view>
+
+        <desc>上传视频</desc>
+        <view class="cons">
+            <mx-upload type="video" />
+
+            <view class="space"></view>
+
+            <mx-upload type="video" cover="https://cdn.weipaitang.com/sky/fapai/tupian/image/20241105/d03bebffe88b4ac39e7246be281d3e62-W3024H3024?index=1" src="https://media.weipaitang.com/wpt_sky/sale/sale/20241105/a47f1036962a4f9485a8a571817a06ab.mp4" />
+        </view>
+
+        <desc>上传文件</desc>
+        <view class="cons">
+            <mx-upload type="file" />
+
+            <view class="space"></view>
+
+            <mx-upload type="file" src="http://cdn.mingsixue.com/temp/1.docx" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">更多用法</title>
+        <desc>属性：</desc>
+
+    
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">更多用法</title>
+        <desc>属性：</desc>
+
+    
+    </wrap>
+    <line />
+
+</view>

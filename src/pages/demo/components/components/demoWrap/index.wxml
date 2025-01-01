@@ -1,0 +1,3 @@
+<view class="demoWrap">
+    <slot></slot>
+</view>

@@ -1,0 +1,3 @@
+<view class="mx-fixed-foot" style="z-index:{{zIndex}};background:{{bgColor}};">
+    <slot></slot>
+</view>

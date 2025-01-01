@@ -1,0 +1,73 @@
+<view class="pageDemo">
+    <mx-nav title="图标组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>图标组件（示例）</title>
+    <desc>组件名称：Icon</desc>
+    <desc>共有 203 个图标，涵盖日常使用需求</desc>
+    <desc>可自定义颜色、自定义大小</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基础图标</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{base}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+    <wrap>
+        <title type="h2">箭头类</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{arrows}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+    <wrap>
+        <title type="h2">表单类</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{form}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+    <wrap>
+        <title type="h2">提示类</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{tips}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+    <wrap>
+        <title type="h2">导航类</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{nav}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+    <wrap>
+        <title type="h2">数字</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{nums}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+    <wrap>
+        <title type="h2">等级</title>
+        <line />
+        <view class="cons">
+            <view class="item" wx:for="{{level}}" wx:key="*this">
+                <mx-icon name="{{item}}" />
+            </view>
+        </view>
+    </wrap>
+</view>

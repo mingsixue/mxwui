@@ -1,0 +1,44 @@
+.labels{
+    display: flex;
+    align-items: center;
+    padding: 32rpx 24rpx 12rpx 24rpx;
+    &.labels-left{
+        justify-content: flex-start;
+    }
+    &.labels-center{
+        justify-content: center;
+    }
+    &.labels-right{
+        justify-content: flex-end;
+    }
+    &.labels-horizontal{
+        padding: 0 24rpx 0 24rpx;
+    }
+    .firstIcon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 16rpx;
+    }
+    .required{
+        display: flex;
+        align-items: center;
+        font-size: 28rpx;
+        color: #CA0E2D;
+        &.requiredLeft{
+            margin-right: 8rpx;
+        }
+        &.requiredRight{
+            margin-left: 8rpx;
+        }
+    }
+    .label{
+        font-size: 32rpx;
+    }
+    .lastIcon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 8rpx;
+    }
+}

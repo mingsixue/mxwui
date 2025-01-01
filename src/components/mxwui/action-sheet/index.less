@@ -1,0 +1,66 @@
+@import url('@common/common.less');
+
+.mx-dialog-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 106rpx;
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: @TEXT_COLOR;
+    background: @BG_COLOR;
+}
+
+.mx-dialog-cons{
+    .list{
+        display: block;
+        width: 702rpx;
+        margin: 0 auto;
+        .item{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 702rpx;
+            height: 104rpx;
+            font-size: 36rpx;
+            color: @TEXT_COLOR;
+            box-shadow: inset 0px -1px 0px 0px @BORDER_COLOR;
+            &:last-child{
+                box-shadow: none;
+            }
+
+            .txt{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 104rpx;
+            }
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 8rpx;
+                .icon{
+                    width: 48rpx;
+                    height: 48rpx;
+                }
+            }
+        }
+    }
+    .line{
+        width: 750rpx;
+        height: 16rpx;
+        background: @BG_COLOR;
+    }
+    .cancel{
+        height: 96rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36rpx;
+        color: @PLACEHOLDER_COLOR;
+    }
+}

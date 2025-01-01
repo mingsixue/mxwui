@@ -1,0 +1,1 @@
+<view class="mx-level" style="background:{{bgColor}};width:{{bgWidth}}rpx;height:{{bgHeight}}rpx;line-height:{{bgHeight}}rpx;border-radius:{{bgRadius}}rpx;"><mx-icon name="level-{{level}}" color="{{textColor}}" size="{{textSize}}" /></view> 

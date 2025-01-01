@@ -1,0 +1,11 @@
+<view class="mx-menu {{isFixed ? 'mx-menu-fixed' : ''}}" style="z-index:{{zIndex}};">
+    <view class="mx-menu-item" wx:for="{{options}}" wx:key="text" bind:tap="handleClick" data-item="{{item}}" data-idx="{{index}}">
+        <view wx:if="{{item.iconUrl || item.iconName}}" class="icons">
+            <image wx:if="{{item.iconUrl}}" class="icon-img" mode="widthFix" src="{{current == index ? item.iconSelectUrl || item.iconUrl : item.iconUrl}}" />
+            <mx-icon wx:else name="{{item.iconName}}" color="{{current == index ? selectColor : color}}" size="44" />
+
+            <view wx:if="{{item.dot}}" class="dot"></view>
+        </view>
+        <view class="text" style="color:{{current == index ? selectColor : color}};font-size:{{textSize}}rpx;">{{item.text}}</view>
+    </view>
+</view>

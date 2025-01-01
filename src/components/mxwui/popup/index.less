@@ -1,0 +1,25 @@
+@import url('@common/common.less');
+.mx-popup{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .mx-popup-wrap{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        height: 100vh;
+        background: #FFFFFF;
+        &.mx-popup-left{
+            left: 0;
+        }
+        &.mx-popup-right{
+            right: 0;
+        }
+        .mx-popup-cons{
+            height: calc(100vh - 128rpx - 68rpx);
+            padding: 128rpx 24rpx 68rpx 24rpx;
+        }
+    }
+}

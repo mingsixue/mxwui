@@ -1,0 +1,101 @@
+<view class="pageDemo">
+    <mx-nav title="信息弹窗组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>信息弹窗组件（示例）</title>
+    <desc>组件名称：Alert</desc>
+    <desc>适用于消息通知、用户操作反馈等无需用户确认的场景，基于基础弹窗组件封装，提供少量可修改属性，如有定制需求请用基础弹窗组件（Dialog 组件）。</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基础使用</title>
+        <mx-alert visible="{{visible}}" title="标题" content="自定义内容区域可以自定义内容，提供一段文本显示，默认只有确定按钮，可以点击蒙层取消弹窗。" bind:alert_confirm="handleConfirm" bind:alert_close="handleCancel" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleBasic">查看样式</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示弹窗</title>
+        <desc>属性：visible</desc>
+
+        <mx-alert visible="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题</title>
+        <desc>属性：title，默认为“系统消息”</desc>
+
+        <mx-alert visible="{{visibleTitle}}" title="自定义标题" bind:alert_confirm="handleConfirm" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleTitle">自定义标题</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">内容</title>
+        <desc>属性：content</desc>
+
+        <mx-alert visible="{{visibleContent}}" content="这是自定义内容，高度可根据内容多少自适应展示这是自定义内容这是自定义内容这是自定义内容这是自定义内容" bind:alert_confirm="handleConfirm" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleContent">自定义内容</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">确认按钮</title>
+        <desc>属性：confirmBtnText</desc>
+        <desc>属性：confirmBtnColor</desc>
+
+        <mx-alert visible="{{visibleConfirm}}" content="这是自定义内容，高度可根据内容多少自适应展示这是自定义内容这是自定义内容这是自定义内容这是自定义内容" confirmBtnText="{{confirmBtnText}}" confirmBtnColor="{{confirmBtnColor}}" bind:alert_confirm="handleConfirm" />
+
+        <view class="cons">
+            <mx-btn width="200rpx" small bind:btn_tap="handleConfirm2">修改按钮文案</mx-btn>
+
+            <view class="space"></view>
+
+            <mx-btn width="200rpx" small bind:btn_tap="handleConfirm3">修改按钮颜色</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">按钮事件</title>
+        <desc>确认按钮事件：bind:alert_confirm</desc>
+        <desc>弹窗关闭事件：bind:alert_close</desc>
+
+        <mx-alert visible="{{visibleHandle}}" bind:alert_confirm="handleConfirm" bind:alert_close="handleCancel" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleHandle">查看效果</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex</desc>
+
+        <mx-dialog visible="{{false}}" zIndex="1" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">点击蒙层是否可关闭弹窗</title>
+        <desc>属性：isCloseMask：true / false</desc>
+
+        <mx-alert visible="{{visibleMaskClose}}" isCloseMask="{{false}}" bind:alert_confirm="handleConfirm" />
+
+        <view class="cons">
+            <mx-btn width="190rpx" small bind:btn_tap="handleMaskClose">蒙层不可关闭</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+</view>

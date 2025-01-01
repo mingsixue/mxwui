@@ -1,0 +1,52 @@
+@import url('@common/common.less');
+.mx-menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100rpx;
+    background: @WHITE_COLOR;
+    box-shadow: 0rpx -2rpx 4rpx 0px rgba(0,0,0,0.03);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    &.mx-menu-fixed{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    .mx-menu-item{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        height: 100rpx;
+        .icons{
+            position: relative;
+            margin-top: 8rpx;
+            .icon-img{
+                display: inline-block;
+                width: 44rpx;
+                height: 44rpx;
+            }
+        }
+        .text{
+            display: block;
+            font-weight: bold;
+            text-align: center;
+        }
+        .dot{
+            position: absolute;
+            top: -4rpx;
+            right: -12rpx;
+            width: 20rpx;
+            height: 20rpx;
+            border-radius: 50%;
+            background: #CA0E2D;
+            border: 2rpx solid @WHITE_COLOR;
+            box-sizing: content-box;
+        }
+    }
+}

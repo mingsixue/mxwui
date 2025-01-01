@@ -1,0 +1,14 @@
+<view class="mx-dialog" wx:if="{{visible}}" style="z-index:{{zIndex}};">
+    <mx-mask visible="{{true}}" zIndex="1" bind:mask_tap="handleMask" />
+    <view class="mx-dialog-wrap">
+        <view wx:if="{{title}}" class="mx-dialog-title" style="color:{{titleColor}};">{{title}}</view>
+        <view class="mx-dialog-cons">
+            <view wx:if="{{content}}" class="mx-dialog-msgs" style="color:{{contentColor}};">{{content}}</view>
+            <slot></slot>
+        </view>
+        <view wx:if="{{confirmBtn || cancelBtn}}" class="mx-dialog-bnts">
+            <view wx:if="{{cancelBtn}}" class="btn btn-minor" style="color:{{cancelBtnColor}}" bind:tap="handleCancel">{{cancelBtnText}}</view>
+            <view wx:if="{{confirmBtn}}" class="btn btn-main" style="color:{{confirmBtnColor}};" bind:tap="handleConfirm">{{confirmBtnText}}</view>
+        </view>
+    </view>
+</view>

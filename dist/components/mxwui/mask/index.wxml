@@ -1,0 +1,1 @@
+<view  wx:if="{{visible}}"  class="mx-mask"  style="z-index: {{zIndex}};"  animation="{{animationData}}" capture-catch:touchmove="{{false}}"  bind:tap="handleTapMask"  ></view>

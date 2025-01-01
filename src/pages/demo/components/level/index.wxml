@@ -1,0 +1,139 @@
+<view class="pageDemo">
+    <mx-nav title="等级组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>等级组件（示例）</title>
+    <desc>组件名称：Level</desc>
+    <desc>适用于用户等级、卖家等级、会员等级等场景。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">等级</title>
+        <desc>属性：level，数字 1-15</desc>
+        <view class="cons">
+            <mx-level level="1" />
+            <view class="space"></view>
+            <mx-level level="2" />
+            <view class="space"></view>
+            <mx-level level="3" />
+            <view class="space"></view>
+            <mx-level level="4" />
+            <view class="space"></view>
+            <mx-level level="5" />
+            <view class="space"></view>
+            <mx-level level="6" />
+            <view class="space"></view>
+            <mx-level level="7" />
+            <view class="space"></view>
+            <mx-level level="8" />
+            <view class="space"></view>
+            <mx-level level="9" />
+            <view class="space"></view>
+            <mx-level level="10" />
+            <view class="space"></view>
+            <mx-level level="11" />
+            <view class="space"></view>
+            <mx-level level="12" />
+            <view class="space"></view>
+            <mx-level level="13" />
+            <view class="space"></view>
+            <mx-level level="14" />
+            <view class="space"></view>
+            <mx-level level="15" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义背景色</title>
+        <desc>属性：bgColor，支持传入渐变</desc>
+
+        <view class="cons">
+            <mx-level level="1" bgColor="linear-gradient(270deg, #D4C2A3 0%, #BC9F77 100%)" />
+            <view class="space"></view>
+            <mx-level level="2" bgColor="linear-gradient(270deg, #D4C2A3 0%, #BC9F77 100%)" />
+            <view class="space"></view>
+            <mx-level level="3" bgColor="linear-gradient(270deg, #D4C2A3 0%, #BC9F77 100%)" />
+            <view class="space"></view>
+            <mx-level level="4" bgColor="linear-gradient(270deg, #D4C2A3 0%, #BC9F77 100%)" />
+            <view class="space"></view>
+            <mx-level level="5" bgColor="linear-gradient(270deg, #D4C2A3 0%, #BC9F77 100%)" />
+            <view class="space"></view>
+            <mx-level level="6" bgColor="linear-gradient(270deg, #EABB71 0%, #995D14 100%)" />
+            <view class="space"></view>
+            <mx-level level="7" bgColor="linear-gradient(270deg, #EABB71 0%, #995D14 100%)" />
+            <view class="space"></view>
+            <mx-level level="8" bgColor="linear-gradient(270deg, #EABB71 0%, #995D14 100%)" />
+            <view class="space"></view>
+            <mx-level level="9" bgColor="linear-gradient(270deg, #EABB71 0%, #995D14 100%)" />
+            <view class="space"></view>
+            <mx-level level="10" bgColor="linear-gradient(270deg, #EABB71 0%, #995D14 100%)" />
+            <view class="space"></view>
+            <mx-level level="11" bgColor="linear-gradient(270deg, #4A4030 0%, #000000 100%)" />
+            <view class="space"></view>
+            <mx-level level="12" bgColor="linear-gradient(270deg, #4A4030 0%, #000000 100%)" />
+            <view class="space"></view>
+            <mx-level level="13" bgColor="linear-gradient(270deg, #4A4030 0%, #000000 100%)" />
+            <view class="space"></view>
+            <mx-level level="14" bgColor="linear-gradient(270deg, #4A4030 0%, #000000 100%)" />
+            <view class="space"></view>
+            <mx-level level="15" bgColor="linear-gradient(270deg, #4A4030 0%, #000000 100%)" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义背景宽高圆角</title>
+        <desc>属性：bgWidth，背景宽度</desc>
+        <desc>属性：bgHeight，背景高度</desc>
+        <desc>属性：bgRadius，背景圆角</desc>
+
+        <view class="cons">
+            <mx-level level="1" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="2" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="3" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="4" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="5" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="6" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)"/>
+            <view class="space"></view>
+            <mx-level level="7" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)"/>
+            <view class="space"></view>
+            <mx-level level="8" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)"/>
+            <view class="space"></view>
+            <mx-level level="9" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)"/>
+            <view class="space"></view>
+            <mx-level level="10" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)"/>
+            <view class="space"></view>
+            <mx-level level="11" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="12" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="13" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="14" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+            <view class="space"></view>
+            <mx-level level="15" bgWidth="84" bgHeight="50" bgRadius="32" textSize="48" bgColor="linear-gradient(90deg, #AB3B3A 0%, #D32F2F 100%)" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义文本色和字号</title>
+        <desc>属性：textColor，自定义文本色</desc>
+        <desc>属性：textSize，自定义字号</desc>
+
+        <view class="cons">
+            <mx-level level="1" textSize="38" textColor="#4e0909" bgColor="#e6ae0e" />
+        </view>
+    </wrap>
+    <line />
+
+</view>

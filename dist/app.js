@@ -1,0 +1,1 @@
+App({onLaunch(){this.init()},onShow(){},onHide(){},globalData:{isLogin:!1},init(){}});

@@ -1,0 +1,1 @@
+<view class="mx-popup" wx:if="{{visible}}" style="z-index:{{zIndex}};"><mx-mask visible="{{true}}" zIndex="1" bind:mask_tap="handleMask" /><view class="mx-popup-wrap mx-popup-{{type}}" style="width:{{width}};"><view class="mx-popup-cons"><slot></slot></view></view></view> 

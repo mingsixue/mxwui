@@ -1,0 +1,105 @@
+@import url('@common/common.less');
+.mx-search{
+    .mx-search-wrap{
+        position: relative;
+        width: 702rpx;
+        height: 64rpx;
+        border-radius: 4rpx;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        .back{
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 64rpx;
+            padding-right: 24rpx;
+        }
+        .input-wrap{
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .search-icon{
+            flex-shrink: 0;
+            padding: 8rpx 0 8rpx 16rpx;
+        }
+        .keywords{
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8rpx;
+            .keyword{
+                display: flex;
+                align-items: center;
+                padding: 0 0 0 8rpx;
+                height: 44rpx;
+                .text{
+                    font-size: 28rpx;
+                }
+                .close{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44rpx;
+                    height: 44rpx;
+                }
+            }
+        }
+        .inputs{
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-left: 16rpx;
+            .input{
+                width: 100%;
+                height: 64rpx;
+                color: #040A23;
+                font-size: 28rpx;
+            }
+            .clear{
+                flex-shrink: 0;
+                padding: 0 24rpx;
+                height: 64rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .btn{
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 76rpx;
+            height: 64rpx;
+            padding-left: 24rpx;
+            font-size: 32rpx;
+            color: #040A23;
+        }
+        .btn-insert{
+            position: relative;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 64rpx;
+            padding: 0 24rpx;
+            font-size: 28rpx;
+            font-weight: bold;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 22rpx;
+                left: 0;
+                width: 2rpx;
+                height: 20rpx;
+                background: rgba(154, 160, 177, .5);
+            }
+        }
+    }
+}

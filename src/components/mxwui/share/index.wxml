@@ -1,0 +1,28 @@
+<mx-dialog-bottom wx:if="{{visible}}" visible="{{true}}" showClose="{{showWrapClose}}" zIndex="{{zIndex}}" isCloseMask="{{isCloseMask}}" height="" bind:dialog_bottom_close="handleMaskClose">
+    <image wx:if="{{imgUrl}}" class="mx-dialog-headimg" mode="widthFix" src="{{imgUrl}}" />
+    <view wx:if="{{title || desc}}" class="mx-dialog-head {{title && desc ? 'mx-dialog-head2' : ''}}">
+        <view class="title" style="color:{{titleColor}};">{{title}}</view>
+        <view class="desc" style="color:{{descColor}};">{{desc}}</view>
+    </view>
+    <view class="mx-dialog-cons">
+        <view class="list">
+            <button wx:if="{{showWechat}}" class="item" openType="share" bind:tap="handleWechat">
+                <view class="icon icon-wechat"></view>
+                <view class="txt">微信好友</view>
+            </button>
+            <button wx:if="{{showFriends}}" class="item" bind:tap="handleFriends">
+                <view class="icon icon-friends"></view>
+                <view class="txt">朋友圈</view>
+            </button>
+            <button wx:if="{{showQrcode}}" class="item" bind:tap="handleQrcode">
+                <view class="icon icon-qrcode"></view>
+                <view class="txt">二维码</view>
+            </button>
+            <button wx:if="{{showCopyLink}}" class="item" bind:tap="handleCopyLink">
+                <view class="icon icon-copylink"></view>
+                <view class="txt">复制链接</view>
+            </button>
+        </view>
+        <view class="cancel" bind:tap="handleCancel">取消</view>
+    </view>
+</mx-dialog-bottom>

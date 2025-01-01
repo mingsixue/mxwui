@@ -1,0 +1,1 @@
+<view wx:if="{{desc}}" class="desc {{normal ? 'desc-normal' : ''}}" style="color:{{descColor}};">{{desc}}</view>

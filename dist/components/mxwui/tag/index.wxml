@@ -1,0 +1,1 @@
+<view class="mx-tag" style="color:{{textColor}};border:2rpx solid {{borderColor}};background:{{bgColor}};">{{text}}</view> 

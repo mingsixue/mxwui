@@ -1,0 +1,93 @@
+<view class="pageDemo">
+    <mx-nav title="Empty 组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>Empty空数据组件（示例）</title>
+    <desc>组件名称：Empty</desc>
+    <desc>用于展示空数据时的情况，支持自定义图标，支持引导按钮，单按钮、双按钮</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基础用法</title>
+
+        <mx-empty />
+
+        <line />
+    </wrap>
+
+    <wrap>
+        <title type="h2">缺省文案</title>
+        <desc>属性：text</desc>
+        <mx-empty text="暂无内容" />
+
+        <desc>属性：textColor</desc>
+        <mx-empty text="暂无内容" textColor="#f00" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述文案</title>
+        <desc>属性：desc</desc>
+
+        <mx-empty desc="这是描述文案" />
+
+        <desc>属性：descColor</desc>
+        <mx-empty desc="这是描述文案" descColor="#00f" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单按钮</title>
+        <desc>属性：mainBtnText，主按钮文案</desc>
+        <desc>事件：bind:empty_main_tap，主按钮点击事件</desc>
+
+        <mx-empty mainBtnText="主按钮" bind:empty_main_tap="handleMainBtn" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">双按钮</title>
+        <desc>属性：mainBtnText，主按钮文案</desc>
+        <desc>事件：bind:empty_main_tap，主按钮点击事件</desc>
+        <desc>属性：minorBtnText，次按钮文案</desc>
+        <desc>事件：bind:empty_minor_tap，次按钮点击事件</desc>
+
+        <mx-empty mainBtnText="主按钮" bind:empty_main_tap="handleMainBtn" minorBtnText="次按钮" bind:empty_minor_tap="handleMinorBtn" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">按钮自定义颜色</title>
+        <desc>属性：mainBtnThemeColor，主按钮颜色</desc>
+        <desc>属性：minorBtnThemeColor，次按钮颜色</desc>
+
+        <mx-empty mainBtnText="主按钮" mainBtnThemeColor="#1677FF" bind:empty_main_tap="handleMainBtn" 
+        minorBtnText="次按钮" 
+        minorBtnThemeColor="#1677FF" bind:empty_minor_tap="handleMinorBtn" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图标</title>
+        <desc>属性：iconName，只支持图标库图标</desc>
+        <desc>属性：iconColor</desc>
+        <desc>属性：iconSize，默认200</desc>
+
+        <mx-empty iconName="order" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图片</title>
+        <desc>属性：iconUrl</desc>
+        <desc>属性：iconSize，默认200</desc>
+
+        <mx-empty iconUrl="http://cdn.mingsixue.com/xcx/MXWUI/remind2.png" />
+    </wrap>
+        <line />
+
+    <wrap>
+        <title type="h2">设置距离顶部距离</title>
+        <desc>属性：top，不带单位</desc>
+        <mx-empty top="300" />
+    </wrap>
+</view>

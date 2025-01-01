@@ -1,0 +1,3 @@
+<mx-list-basic label="{{label}}" labelColor="{{labelColor}}" labelAlign="{{labelAlign}}" leftWidth="{{leftWidth}}" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" required="{{required}}" requiredPosition="{{requiredPosition}}" desc="{{desc}}" descColor="{{descColor}}" arrows="{{false}}" showLine="{{showLine}}" bind:list_basic_firstIcon="handleFirstClick" bind:list_basic_lastIcon="handleLastClick">
+    <mx-switch checked="{{checked}}" disabled="{{disabled}}" color="{{switchColor}}" bind:switch_change="changeSwitch" />
+</mx-list-basic>

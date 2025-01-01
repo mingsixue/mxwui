@@ -1,0 +1,447 @@
+<view class="pageDemo">
+    <mx-nav title="列表下拉组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>列表下拉组件（示例）</title>
+    <desc>组件名称：ListPicker</desc>
+    <desc>下拉选择器，支持普通选择器、多列选择器、时间选择器、日期选择器和省市区选择器。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">样式类型</title>
+        <desc>属性：styleType：horizontal / vertical / web</desc>
+
+        <desc>样式一：horizontal</desc>
+        <mx-list-picker styleType="horizontal" label="下拉选择" options="{{options}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+
+        <desc>样式二：vertical</desc>
+        <mx-list-picker styleType="vertical" label="下拉选择" options="{{options}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+
+        <desc>样式三：web</desc>
+        <mx-list-picker styleType="web" label="下拉选择" options="{{options}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="下拉选择" options="{{options}}" horizontal="{{true}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">下拉类型</title>
+        <desc>属性：mode，selector 普通选择器 / multiSelector 多列选择器 / time 时间选择器 / date 日期选择器 / region 省市区选择器</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">数据项</title>
+        <desc>属性：options，数组</desc>
+        <desc>属性：options[x].label</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">key名称</title>
+        <desc>属性：rangeKey，默认是 label</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">普通选择器下标值</title>
+        <desc>属性：index</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">多列选择器下标值</title>
+        <desc>属性：multiIndex，数组</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">默认时间</title>
+        <desc>属性：time，格式：hh:mm</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">默认日期</title>
+        <desc>属性：date，格式：YYYY-MM-DD</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">开始时间/开始日期</title>
+        <desc>属性：start，格式：hh:mm</desc>
+        <desc>属性：start，格式：YYYY-MM-DD</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">结束时间/结束日期</title>
+        <desc>属性：end，格式：hh:mm</desc>
+        <desc>属性：end，格式：YYYY-MM-DD</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">日期选择器粒度</title>
+        <desc>属性：fields：year / month / day</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">省市区选择器值</title>
+        <desc>属性：region，数组</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">省市区选择器层级</title>
+        <desc>属性：level：province 省级选择器 / city 市级选择器 / region 区级选择器 / sub-district 街道选择器</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">占位文本</title>
+        <desc>属性：placeholder</desc>
+        <desc>属性：placeholderColor，占位文本颜色</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">文本色</title>
+        <desc>属性：textColor</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否禁用</title>
+        <desc>属性：disabled</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">右侧内容是否居左</title>
+        <desc>属性：isLeft</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">左侧自定义宽度</title>
+        <desc>属性：leftWidth</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文案</title>
+        <desc>属性：label</desc>
+        <desc>属性：labelColor，标签文案文本色</desc>
+        <desc>属性：labelAlign，对齐方式，left / center / right</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示必填星号</title>
+        <desc>属性：required</desc>
+        <desc>属性：requiredPosition，必填星号位置，left、right</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签前图标</title>
+        <desc>属性：firstIcon</desc>
+        <desc>属性：firstIcon[x].iconName</desc>
+        <desc>属性：firstIcon[x].iconColor</desc>
+        <desc>属性：firstIcon[x].iconUrl</desc>
+        <desc>属性：firstIcon[x].iconSize</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签后图标</title>
+        <desc>属性：lastIcon</desc>
+        <desc>属性：lastIcon[x].iconName</desc>
+        <desc>属性：lastIcon[x].iconColor</desc>
+        <desc>属性：lastIcon[x].iconUrl</desc>
+        <desc>属性：lastIcon[x].iconSize</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示右箭头</title>
+        <desc>属性：arrows</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述或错误文案</title>
+        <desc>属性：desc</desc>
+        <desc>属性：descColor，描述文案文本色</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示分隔线</title>
+        <desc>属性：showLine</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">背景色</title>
+        <desc>属性：bgColor</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否横向布局</title>
+        <desc>属性：horizontal</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">样式一：horizontal</title>
+
+        <mx-list-picker styleType="horizontal" label="普通选择器" mode="selector" options="{{options}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="多列选择器" mode="multiSelector" options="{{multiOptions}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_column_change="handleColumnChange" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="时间选择器" mode="time" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="日期选择器" mode="date" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="省市区选择器" mode="region" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="普通选择器" mode="selector" options="{{options}}" index="{{index}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="多列选择器" mode="multiSelector" options="{{multiOptions}}" multiIndex="{{multiIndex}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_column_change="handleColumnChange" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="时间选择器" mode="time" time="13:14" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="日期选择器" mode="date" date="2024-05-20" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="省市区选择器" mode="region" region="{{region}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="月选择器" mode="date" fields="month" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="年选择器" mode="date" fields="year" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="限制开始时间" mode="time" start="09:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="限制结束时间" mode="time" end="23:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="限制时间范围" mode="time" start="12:00" end="18:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="限制开始日期" mode="date" start="2024-01-01" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="限制结束日期" mode="date" end="2024-12-31" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="限制日期范围" mode="date" start="2024-03-01" end="2024-08-31" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="省选择器" mode="region" level="province" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="省市选择器" mode="region" level="city" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="省市区选择器" mode="region" level="region" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" label="省市区街道选择器" mode="region" level="sub-district" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="占位文本" placeholder="请选择选项" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="占位文本颜色" placeholderColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="文本颜色" textColor="#1677FF" mode="selector" index="1" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="禁用" textColor="#1677FF" mode="selector" disabled="{{true}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="内容居左" mode="selector" isLeft="{{true}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="左侧自定义宽度" mode="selector" leftWidth="250" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="标签文本色" labelColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="必填星号" required mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="必填星号在前面" required requiredPosition="left" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="标签前自定义图标" firstIcon="{{firstIcon}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_firstIcon="handleFirstClick" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="标签前自定义图片" firstIcon="{{firstIcon2}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_firstIcon="handleFirstClick" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="标签后自定义图标" lastIcon="{{lastIcon}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_lastIcon="handleLastClick" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="标签后自定义图片" lastIcon="{{lastIcon2}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_lastIcon="handleLastClick" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="不显示右侧箭头" arrows="{{false}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="自定义描述" desc="这是描述内容" descColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="horizontal" options="{{options}}" label="不显示分隔线" showLine="{{false}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">样式二：vertical</title>
+
+        <mx-list-picker styleType="vertical" label="普通选择器" mode="selector" options="{{options}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="多列选择器" mode="multiSelector" options="{{multiOptions}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_column_change="handleColumnChange" />
+        <line />
+        <mx-list-picker styleType="vertical" label="时间选择器" mode="time" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="日期选择器" mode="date" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="省市区选择器" mode="region" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="普通选择器" mode="selector" options="{{options}}" index="{{index}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="多列选择器" mode="multiSelector" options="{{multiOptions}}" multiIndex="{{multiIndex}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_column_change="handleColumnChange" />
+        <line />
+        <mx-list-picker styleType="vertical" label="时间选择器" mode="time" time="13:14" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="日期选择器" mode="date" date="2024-05-20" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="省市区选择器" mode="region" region="{{region}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="月选择器" mode="date" fields="month" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="年选择器" mode="date" fields="year" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="限制开始时间" mode="time" start="09:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="限制结束时间" mode="time" end="23:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="限制时间范围" mode="time" start="12:00" end="18:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="限制开始日期" mode="date" start="2024-01-01" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="限制结束日期" mode="date" end="2024-12-31" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="限制日期范围" mode="date" start="2024-03-01" end="2024-08-31" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="省选择器" mode="region" level="province" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="省市选择器" mode="region" level="city" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="省市区选择器" mode="region" level="region" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" label="省市区街道选择器" mode="region" level="sub-district" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="占位文本" placeholder="请选择选项" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="占位文本颜色" placeholderColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="文本颜色" textColor="#1677FF" mode="selector" index="1" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="禁用" textColor="#1677FF" mode="selector" disabled="{{true}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="标签文本色" labelColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="必填星号" required mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="必填星号在前面" required requiredPosition="left" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="标签前自定义图标" firstIcon="{{firstIcon}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_firstIcon="handleFirstClick" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="标签前自定义图片" firstIcon="{{firstIcon2}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_firstIcon="handleFirstClick" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="标签后自定义图标" lastIcon="{{lastIcon}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_lastIcon="handleLastClick" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="标签后自定义图片" lastIcon="{{lastIcon2}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_lastIcon="handleLastClick" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="不显示右侧箭头" arrows="{{false}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="自定义描述" desc="这是描述内容" descColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="vertical" options="{{options}}" label="自定义背景色" bgColor="#dcdcdc" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">样式三：web</title>
+
+        <mx-list-picker styleType="web" label="普通选择器" mode="selector" options="{{options}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="多列选择器" mode="multiSelector" options="{{multiOptions}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_column_change="handleColumnChange" />
+        <line />
+        <mx-list-picker styleType="web" label="时间选择器" mode="time" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="日期选择器" mode="date" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="省市区选择器" mode="region" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="普通选择器" mode="selector" options="{{options}}" index="{{index}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="多列选择器" mode="multiSelector" options="{{multiOptions}}" multiIndex="{{multiIndex}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_column_change="handleColumnChange" />
+        <line />
+        <mx-list-picker styleType="web" label="时间选择器" mode="time" time="13:14" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="日期选择器" mode="date" date="2024-05-20" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="省市区选择器" mode="region" region="{{region}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="月选择器" mode="date" fields="month" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="年选择器" mode="date" fields="year" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="限制开始时间" mode="time" start="09:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="限制结束时间" mode="time" end="23:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="限制时间范围" mode="time" start="12:00" end="18:00" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="限制开始日期" mode="date" start="2024-01-01" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="限制结束日期" mode="date" end="2024-12-31" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="限制日期范围" mode="date" start="2024-03-01" end="2024-08-31" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="省选择器" mode="region" level="province" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="省市选择器" mode="region" level="city" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="省市区选择器" mode="region" level="region" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" label="省市区街道选择器" mode="region" level="sub-district" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="占位文本" placeholder="请选择选项" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="占位文本颜色" placeholderColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="文本颜色" textColor="#1677FF" mode="selector" index="1" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="禁用" textColor="#1677FF" mode="selector" disabled="{{true}}" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="标签文本色" labelColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="必填星号" required mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="必填星号在前面" required requiredPosition="left" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="标签前自定义图标" firstIcon="{{firstIcon}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_firstIcon="handleFirstClick" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="标签前自定义图片" firstIcon="{{firstIcon2}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_firstIcon="handleFirstClick" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="标签后自定义图标" lastIcon="{{lastIcon}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_lastIcon="handleLastClick" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="标签后自定义图片" lastIcon="{{lastIcon2}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" bind:list_picker_lastIcon="handleLastClick" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="不显示右侧箭头" arrows="{{false}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="自定义描述" desc="这是描述内容" descColor="#1677FF" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="自定义背景色" bgColor="#dcdcdc" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="横向布局" horizontal="{{true}}" mode="selector" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="居中：" horizontal="{{true}}" mode="selector" leftWidth="200" labelAlign="center" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+        <mx-list-picker styleType="web" options="{{options}}" label="居右：" horizontal="{{true}}" mode="selector" leftWidth="200" labelAlign="right" bind:list_picker_change="handleChange" bind:list_picker_cancel="handleCancel" />
+        <line />
+    </wrap>
+    <line />
+</view>

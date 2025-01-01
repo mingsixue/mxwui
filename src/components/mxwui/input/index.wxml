@@ -1,0 +1,49 @@
+<view class="mx-input">
+    <view class="inputs-wrap {{styleType == 'vertical' || styleType == 'web' ? 'inputs-wrap-nobg' : ''}} {{showLine && (styleType == 'normal' || styleType == 'horizontal') ? 'inputs-line' : ''}} {{disabled ? 'inputs-disabled' : ''}}">
+        <block wx:if="{{styleType == 'normal'}}">
+            <view class="inputs-normal">
+                <input class="input" type="{{type}}" password="{{password}}" maxlength="{{maxLength}}" value="{{value}}" cursor-color="{{cursorColor}}" placeholder="{{placeholder}}" placeholder-style="color:{{placeholderColor}};" disabled="{{disabled}}" cursor-spacing="{{cursorSpacing}}" focus="{{focus}}" confirm-type="{{confirmType}}" always-embed="{{alwaysEmbed}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" bind:input="inputChange" bind:focus="inputFocus" bind:blur="inputBlur" bind:confirm="inputConfirm" bind:keyboardheightchange="inputKeyBoardHeightChange" />
+                <view wx:if="{{clear && !disabled && value}}" class="clear" bind:tap="handleClear">
+                    <mx-icon name="close_fill" color="{{PLACEHOLDER_COLOR}}" size="40" />
+                </view>
+            </view>
+            <form-desc normal desc="{{desc}}" descColor="{{descColor}}" />
+        </block>
+        <block wx:elif="{{styleType == 'horizontal'}}">
+            <mx-list-basic label="{{label}}" labelColor="{{labelColor}}" labelAlign="{{labelAlign}}" leftWidth="{{leftWidth}}" required="{{required}}" requiredPosition="{{requiredPosition}}" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" desc="{{desc}}" descColor="{{descColor}}" showLine="{{false}}" arrows="{{false}}" isLeft bind:list_basic_firstIcon="handleFirstClick" bind:list_basic_lastIcon="handleLastClick">
+                <view class="inputs-horizontal">
+                    <input class="input {{inputAlign ? 'input-' + inputAlign : ''}}" type="{{type}}" password="{{password}}" maxlength="{{maxLength}}" value="{{value}}" cursor-color="{{cursorColor}}" placeholder="{{placeholder}}" placeholder-style="color:{{placeholderColor}};" disabled="{{disabled}}" cursor-spacing="{{cursorSpacing}}" focus="{{focus}}" confirm-type="{{confirmType}}" always-embed="{{alwaysEmbed}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" bind:input="inputChange" bind:focus="inputFocus" bind:blur="inputBlur" bind:confirm="inputConfirm" bind:keyboardheightchange="inputKeyBoardHeightChange" />
+                    <view wx:if="{{clear && !disabled && value}}" class="clear" bind:tap="handleClear">
+                        <mx-icon name="close_fill" color="{{PLACEHOLDER_COLOR}}" size="40" />
+                    </view>
+                </view>
+            </mx-list-basic>
+        </block>
+        <block wx:elif="{{styleType == 'vertical'}}">
+            <form-label label="{{label}}" labelColor="{{labelColor}}" required="{{required}}" requiredPosition="{{requiredPosition}}" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" bind:form_label_firstIcon="handleFirstClick"bind:form_label_lastIcon="handleLastClick" />
+            <view class="inputs-vertical">
+                <view class="inputs-normal">
+                    <input class="input" type="{{type}}" password="{{password}}" maxlength="{{maxLength}}" value="{{value}}" cursor-color="{{cursorColor}}" placeholder="{{placeholder}}" placeholder-style="color:{{placeholderColor}};" disabled="{{disabled}}" cursor-spacing="{{cursorSpacing}}" focus="{{focus}}" confirm-type="{{confirmType}}" always-embed="{{alwaysEmbed}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" bind:input="inputChange" bind:focus="inputFocus" bind:blur="inputBlur" bind:confirm="inputConfirm" bind:keyboardheightchange="inputKeyBoardHeightChange" />
+                    <view wx:if="{{clear && !disabled && value}}" class="clear" bind:tap="handleClear">
+                        <mx-icon name="close_fill" color="{{PLACEHOLDER_COLOR}}" size="40" />
+                    </view>
+                </view>
+            </view>
+            <form-desc desc="{{desc}}" descColor="{{descColor}}" />
+        </block>
+        <block wx:elif="{{styleType == 'web'}}">
+            <view class="inputs-web {{horizontal ? 'web-horizontal' : 'web-vertical'}}">
+                <view class="labels-wrap">
+                    <form-label horizontal="{{horizontal}}" label="{{label}}" labelColor="{{labelColor}}" labelAlign="{{labelAlign}}" leftWidth="{{leftWidth}}" required="{{required}}" requiredPosition="{{requiredPosition}}" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" bind:form_label_firstIcon="handleFirstClick" bind:form_label_lastIcon="handleLastClick" />
+                </view>
+                <view class="inputs" style="width:{{inputWidth}}rpx;border:1rpx solid {{focus ? cursorColor || inputBgColor || WHITE_COLOR : inputBgColor || WHITE_COLOR}};">
+                    <input class="input" type="{{type}}" password="{{password}}" maxlength="{{maxLength}}" value="{{value}}" cursor-color="{{cursorColor}}" placeholder="{{placeholder}}" placeholder-style="color:{{placeholderColor}};" disabled="{{disabled}}" cursor-spacing="{{cursorSpacing}}" focus="{{focus}}" confirm-type="{{confirmType}}" always-embed="{{alwaysEmbed}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" style="width:{{inputWidth - 108 - (horizontal ? 24 : 0)}}rpx;background-color:{{inputBgColor}};" bind:input="inputChange" bind:focus="inputFocus" bind:blur="inputBlur" bind:confirm="inputConfirm" bind:keyboardheightchange="inputKeyBoardHeightChange" />
+                    <view wx:if="{{clear && !disabled && value}}" class="clear {{horizontal ? 'clear-horizontal' : ''}}" bind:tap="handleClear">
+                        <mx-icon name="close_fill" color="{{PLACEHOLDER_COLOR}}" size="40" />
+                    </view>
+                </view>
+            </view>
+            <form-desc desc="{{desc}}" descColor="{{descColor}}" />
+        </block>
+    </view>
+</view>

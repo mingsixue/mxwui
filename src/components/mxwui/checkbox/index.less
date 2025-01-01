@@ -1,0 +1,28 @@
+@import url('@common/common.less');
+.mx-checkbox{
+    .mx-checkbox-wrap{
+        display: flex;
+        align-items: center;
+        .checkbox{
+            position: relative;
+            .disabled{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 0;
+                transform: translate(-50%, -50%);
+                background: url(http://cdn.mingsixue.com/xcx/MXWUI/checkbox_disabled.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        .checkbox-before{
+            margin-right: 8rpx;
+        }
+        .checkbox-after{
+            margin-left: 8rpx;
+        }
+        .text{
+            font-size: 32rpx;
+        }
+    }
+}

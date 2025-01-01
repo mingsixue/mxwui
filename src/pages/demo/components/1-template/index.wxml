@@ -1,0 +1,37 @@
+<view class="pageDemo">
+    <mx-nav title="xx组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>xx组件（示例）</title>
+    <desc>组件名称：xx</desc>
+    <desc>xx</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基本用法</title>
+        
+        <!-- 默认用法 -->
+        <!-- <mx-btn>默认按钮</mx-btn> -->
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">更多用法</title>
+        <desc>属性：</desc>
+
+    
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">更多用法</title>
+        <desc>属性：</desc>
+
+    
+    </wrap>
+    <line />
+
+</view>

@@ -1,0 +1,3 @@
+<view class="mx-xxx">
+    <slot></slot>
+</view>

@@ -1,0 +1,24 @@
+<view class="mx-nav {{isFixed ? 'mx-nav-fixed' : ''}}" style="z-index: {{zIndex}}; padding-top: {{statusBarHeight}}px; {{bgColor ? 'background-color:'+bgColor+';' : ''}}" catch:touchmove="{{true}}">
+    <view class="mx-nav-box mx-nav-{{theme}}" style=" {{bgColor ?  'background-color:'+bgColor+';' : ''}}">
+        <view wx:if="{{!isLeft}}" class="titles">
+            <image wx:if="{{titleImg}}" class="titleImg" mode="heightFix" src="{{titleImg}}" />
+            <view wx:else class="title" style="{{titleColor ? 'color:'+titleColor+';' : ''}}">{{title}}</view>
+        </view>
+        <view class="leftAction">
+            <view wx:if="{{isHideIcon}}" class="icons">
+                <view wx:if="{{!isCurrent}}" class="first-icon" bind:tap="handleIcon">
+                    <image wx:if="{{iconImg}}" class="iconImg" mode="heightFix" src="{{iconImg}}" />
+                    <mx-icon wx:else name="{{iconName}}" color="{{iconColor}}" />
+                </view>
+                <view wx:if="{{secondIconName || secondIconImg}}" class="second-icon" bind:tap="handleSecondIcon">
+                    <image wx:if="{{secondIconImg}}" class="secondIconImg" mode="heightFix" src="{{secondIconImg}}" />
+                    <mx-icon wx:else name="{{secondIconName}}" color="{{secondIconColor}}" />
+                </view>
+            </view>
+            <viewe wx:if="{{isLeft}}" class="tits">
+                <image wx:if="{{titleImg}}" class="titImg" mode="heightFix" src="{{titleImg}}" />
+                <view wx:else class="tit" style="{{titleColor ? 'color:'+titleColor+';' : ''}}">{{title}}</view>
+            </viewe>
+        </view>
+    </view>
+</view>

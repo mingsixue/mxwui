@@ -1,0 +1,219 @@
+<view class="pageDemo">
+    <mx-nav title="日历组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>日历组件（示例）</title>
+    <desc>组件名称：Calendar</desc>
+    <desc>适用于需要日期选择的场景</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示</title>
+        <desc>属性：visible</desc>
+        <mx-calendar visible="{{visible}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisible">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">选择模式</title>
+        <desc>属性：selectionMode，single 单个日期选择 / range 日期段</desc>
+
+        <mx-calendar visible="{{visibleMode}}" selectionMode="range" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleMode">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">初始日期</title>
+        <desc>属性：defaultValue，格式 YYYY-MM-DD，selectionMode=single有效</desc>
+
+        <mx-calendar visible="{{visibleValue}}" defaultValue="2024-05-20" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleValue">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">开始日期/结束日期</title>
+        <desc>属性：startDate，格式 YYYY-MM-DD，selectionMode=range有效</desc>
+        <desc>属性：endDate，格式 YYYY-MM-DD，selectionMode=range有效</desc>
+
+        <mx-calendar visible="{{visibleStart}}" selectionMode="range" startDate="2024-12-10" endDate="2024-12-20" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleStart">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">最小可选日期</title>
+        <desc>属性：min，格式 YYYY-MM-DD</desc>
+
+        <mx-calendar visible="{{visibleMin}}" min="2024-12-20" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+        <mx-calendar visible="{{visibleMin2}}" selectionMode="range" min="2024-12-20" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleMin">单选限制</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="190rpx" small bind:btn_tap="handleVisibleMin2">日期范围限制</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">最大可选日期</title>
+        <desc>属性：max，格式 YYYY-MM-DD</desc>
+
+        <mx-calendar visible="{{visibleMax}}" max="2024-12-20" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+        <mx-calendar visible="{{visibleMax2}}" selectionMode="range" max="2024-12-20" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleMax">单选限制</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="190rpx" small bind:btn_tap="handleVisibleMax2">日期范围限制</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">日期限制</title>
+
+        <mx-calendar visible="{{visibleMinMax}}" min="2024-12-05" max="2024-12-20" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+        <mx-calendar visible="{{visibleMinMax2}}" selectionMode="range" min="2024-12-05" max="2024-12-20" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="190rpx" small bind:btn_tap="handleVisibleMinMax">最大最小限制</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="190rpx" small bind:btn_tap="handleVisibleMinMax2">日期范围限制</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">第一天是从周一开始还是周日开始</title>
+        <desc>属性：weekStartsOn，Monday / Sunday</desc>
+
+        <mx-calendar visible="{{visibleWeek}}" weekStartsOn="Sunday" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleWeek">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示农历</title>
+        <desc>属性：showLunar</desc>
+
+        <mx-calendar visible="{{visibleLunar}}" showLunar="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleLunar">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示二十四节气</title>
+        <desc>属性：showSolarTerm</desc>
+
+        <mx-calendar visible="{{visibleSolarTerm}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleSolarTerm">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示节日</title>
+        <desc>属性：showFestival</desc>
+
+        <mx-calendar visible="{{visibleFestival}}" showFestival="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleFestival">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">显示节日节气农历</title>
+
+        <mx-calendar visible="{{visibleAll}}" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleAll">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题</title>
+        <desc>属性：title</desc>
+
+        <mx-calendar visible="{{visibleTitle}}" title="日期选择" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleTitle">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">取消按钮</title>
+        <desc>属性：cancelText，取消按钮文案</desc>
+        <desc>属性：cancelColor，取消按钮文本色</desc>
+
+        <mx-calendar visible="{{visibleCancel}}" cancelText="关闭" cancelColor="#1677FF" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleCancel">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">确定按钮</title>
+        <desc>属性：confirmText，确定按钮文案</desc>
+        <desc>属性：confirmColor，确定按钮文本色</desc>
+
+        <mx-calendar visible="{{visibleConfirm}}" confirmText="保存" confirmColor="#1677FF" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleConfirm">查看日历</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">点击蒙层是否可以关闭弹窗</title>
+        <desc>属性：isCloseMask</desc>
+
+        <mx-calendar visible="{{visibleMask}}" isCloseMask="{{false}}" showLunar="{{true}}" showFestival="{{true}}" showSolarTerm="{{true}}" bind:calendar_confirm="handleConfirm" bind:calendar_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleMask">不关闭</mx-btn>
+        </view>
+    </wrap>
+    <line />
+</view>

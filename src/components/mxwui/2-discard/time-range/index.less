@@ -1,0 +1,151 @@
+@import url('@common/common.less');
+.mx-time-range{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    .mx-cons{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100vw;
+        background: @WHITE_COLOR;
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+        .titles{
+            position: relative;
+            height: 104rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cancel{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                padding: 0 32rpx;
+                height: 104rpx;
+                color: @PLACEHOLDER_COLOR;
+                font-size: 32rpx;
+            }
+            .confirm{
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                padding: 0 32rpx;
+                height: 104rpx;
+                color: @THEME_COLOR;
+                font-size: 32rpx;
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 104rpx;
+                color: #040A23;
+                font-size: 36rpx;
+                font-weight: bold;
+            }
+        }
+        .tools{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rpx 52rpx;
+            .start,.end{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 288rpx;
+                height: 72rpx;
+                background: fade(@PLACEHOLDER_COLOR, 10%);
+                color: @TEXT_COLOR;
+                font-size: 28rpx;
+            }
+            .select{
+                background: fade(@THEME_COLOR, 10%);
+                color: @THEME_COLOR;
+            }
+            .line{
+                width: 24rpx;
+                height: 2rpx;
+                margin: 0 24rpx;
+                background: @PLACEHOLDER_COLOR;
+            }
+        }
+    }
+    .pickerWrap{
+        position: relative;
+        height: 480rpx;
+        overflow: hidden;
+        .pickerBg{
+            position: relative;
+            z-index: 3;
+            width: 100vw;
+            height: 480rpx;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3)), linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+            background-position: top, bottom;
+            background-size: 100% 190rpx;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+        .pickerLine{
+            position: absolute;
+            top: 192rpx;
+            left: 0;
+            z-index: 3;
+            width: 100vw;
+            height: 96rpx;
+            box-sizing: content-box;
+            border-top: 2rpx solid @BORDER_COLOR;
+            border-bottom: 2rpx solid @BORDER_COLOR;
+            pointer-events: none;
+        }
+        .picker{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100vw;
+            height: 480rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            
+            .rows{
+                flex: 1;
+                height: 480rpx;
+                // &::-webkit-scrollbar {
+                //     display: none;
+                // }
+                .item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 96rpx;
+                    &.select{
+                        font-size: 36rpx;
+                        font-weight: bold;
+                    }
+                    &.gray{
+                        font-size: 32rpx;
+                        font-weight: normal;
+                    }
+                    &.gray2{
+                        font-size: 32rpx;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}

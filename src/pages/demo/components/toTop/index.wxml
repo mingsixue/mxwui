@@ -1,0 +1,53 @@
+<view class="pageDemo">
+    <mx-nav title="回到顶部组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>回到顶部组件（示例）</title>
+    <desc>组件名称：ToTop</desc>
+    <desc>适用于较长的页面，比如列表页，点击可快速回到页面顶部。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示</title>
+        <desc>属性：visible</desc>
+
+        <mx-to-top visible="{{true}}" bind:totop_done="handleTotop" />
+        
+        <!-- <mx-to-top visible="{{true}}" iconUrl="http://cdn.mingsixue.com/xcx/MXWUI/hot.png" /> -->
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">底部距离</title>
+        <desc>属性：bottom，默认 56</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">右侧距离</title>
+        <desc>属性：right，默认 64</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">背景色</title>
+        <desc>属性：bgColor</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">图标颜色</title>
+        <desc>属性：iconColor</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图片</title>
+        <desc>属性：iconUrl</desc>
+    </wrap>
+    <line />
+
+</view>

@@ -1,0 +1,129 @@
+<view class="pageDemo">
+    <mx-nav title="分享弹窗组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>分享弹窗组件（示例）</title>
+    <desc>组件名称：Share</desc>
+    <desc>分享弹窗组件，只提供基础的样式，具体逻辑需要自行实现。</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示弹窗</title>
+        <desc>属性：visible</desc>
+        
+        <!-- 默认用法 -->
+        <mx-share visible="{{visible}}" bind:share_close="handleClose" />
+
+        <view class="cons">
+            <mx-btn width="120rpx" small bind:btn_tap="handleVisible">查看</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题</title>
+        <desc>属性：title</desc>
+        
+        <mx-share visible="{{visibleTitle}}" title="主标题（支持自定义颜色）" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleTitle">设置标题</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题颜色</title>
+        <desc>属性：titleColor</desc>
+        
+        <mx-share visible="{{visibleTitle2}}" title="主标题（支持自定义颜色）" titleColor="#CA0E2D" />
+
+        <view class="cons">
+            <mx-btn width="200rpx" small bind:btn_tap="handleTitle2">设置标题颜色</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述</title>
+        <desc>属性：desc</desc>
+        
+        <mx-share visible="{{visibleDesc}}" desc="副标题副标题副标题副（支持自定义颜色）" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleDesc">设置描述</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述颜色</title>
+        <desc>属性：descColor</desc>
+        
+        <mx-share visible="{{visibleDesc2}}" desc="副标题副标题副标题副（支持自定义颜色）" descColor="#1677FF" />
+
+        <view class="cons">
+            <mx-btn width="200rpx" small bind:btn_tap="handleDesc2">设置描述颜色</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义头部图片</title>
+        <desc>属性：imgUrl</desc>
+        
+        <mx-share visible="{{false}}" imgUrl="" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示某一项</title>
+        <desc>属性：showWechat，是否显示微信好友</desc>
+        <desc>属性：showFriends，是否显示朋友圈</desc>
+        <desc>属性：showQrcode，是否显示二维码</desc>
+        <desc>属性：showCopyLink，是否显示复制链接</desc>
+        
+        <mx-share visible="{{visibleItem}}" title="自定义内容项" showFriends="{{false}}" />
+
+        <view class="cons">
+            <mx-btn width="200rpx" small bind:btn_tap="handleItem">不显示朋友圈</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex</desc>
+        
+        <mx-share visible="{{false}}" zIndex="1" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">蒙层是否可以关闭弹窗</title>
+        <desc>属性：isCloseMask</desc>
+        
+        <mx-share visible="{{visibleMaskClose}}" isCloseMask="{{false}}" />
+
+        <view class="cons">
+            <mx-btn width="200rpx" small bind:btn_tap="handleMaskClose">蒙层不可关闭</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:share_close，弹窗关闭</desc>
+        <desc>事件：bind:share_wechat，点击微信好友</desc>
+        <desc>事件：bind:share_friends，点击朋友圈</desc>
+        <desc>事件：bind:share_qrcode，点击二维码</desc>
+        <desc>事件：bind:share_copylink，点击复制链接</desc>
+        
+        <mx-share visible="{{visibleHandle}}" showFriends="{{true}}" showQrcode="{{true}}" bind:share_close="handleClose" bind:share_wechat="handleWechat" bind:share_friends="handleFriends" bind:share_qrcode="handleQrcode" bind:share_copylink="handleCopylink" />
+
+        <view class="cons">
+            <mx-btn width="120rpx" small bind:btn_tap="handleHandle">事件</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+</view>

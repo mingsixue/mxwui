@@ -1,0 +1,20 @@
+<block wx:if="{{type == 'image'}}">
+    <image wx:if="{{position == 'lt'}}" class="mx-badge" style="top:{{top}}rpx;left:{{left}}rpx;{{imagWidth ? 'width:'+imagWidth+'rpx;' : ''}}{{imgHeight ? 'height:'+imgHeight+'rpx;' : ''}}" mode="heightFix" src="{{imgUrl}}" />
+    <image wx:elif="{{position == 'rt'}}" class="mx-badge" style="top:{{top}}rpx;right:{{right}}rpx;{{imagWidth ? 'width:'+imagWidth+'rpx;' : ''}}{{imgHeight ? 'height:'+imgHeight+'rpx;' : ''}}" mode="heightFix" src="{{imgUrl}}" />
+    <image wx:elif="{{position == 'lb'}}" class="mx-badge" style="bottom:{{bottom}}rpx;left:{{left}}rpx;{{imagWidth ? 'width:'+imagWidth+'rpx;' : ''}}{{imgHeight ? 'height:'+imgHeight+'rpx;' : ''}}" mode="heightFix" src="{{imgUrl}}" />
+    <image wx:elif="{{position == 'rb'}}" class="mx-badge" style="bottom:{{bottom}}rpx;right:{{right}}rpx;{{imagWidth ? 'width:'+imagWidth+'rpx;' : ''}}{{imgHeight ? 'height:'+imgHeight+'rpx;' : ''}}" mode="heightFix" src="{{imgUrl}}" />
+</block>
+<block wx:else>
+    <view wx:if="{{position == 'lt'}}" class="mx-badge" style="color:{{textColor}};background:{{bgColor}};font-size:{{textSize}}rpx;top:{{top}}rpx;left:{{left}}rpx;border-bottom-right-radius:{{radius}}rpx;padding:4rpx 16rpx 4rpx 12rpx;">
+        {{text}}
+    </view>
+    <view wx:elif="{{position == 'rt'}}" class="mx-badge" style="color:{{textColor}};background:{{bgColor}};font-size:{{textSize}}rpx;top:{{top}};right:{{right}}rpx;border-bottom-left-radius:{{radius}}rpx;padding:4rpx 12rpx 4rpx 16rpx;">
+        {{text}}
+    </view>
+    <view wx:elif="{{position == 'lb'}}" class="mx-badge" style="color:{{textColor}};background:{{bgColor}};font-size:{{textSize}}rpx;bottom:{{bottom}}rpx;left:{{left}}rpx;border-top-right-radius:{{radius}}rpx;padding:4rpx 16rpx 4rpx 12rpx;">
+        {{text}}
+    </view>
+    <view wx:elif="{{position == 'rb'}}" class="mx-badge" style="color:{{textColor}};background:{{bgColor}};font-size:{{textSize}}rpx;bottom:{{bottom}}rpx;right:{{right}}rpx;border-top-left-radius:{{radius}}rpx;padding:4rpx 12rpx 4rpx 16rpx;">
+        {{text}}
+    </view>
+</block>

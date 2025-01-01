@@ -1,0 +1,26 @@
+<view class="mx-tabs-filter">
+    <view class="mx-tabs-box mx-tabs-{{theme}}" style="{{bgColor ? 'background-color:'+bgColor+';' : ''}}">
+        <scroll-view class="mx-tabs-bar" scroll-with-animation="{{true}}" scroll-x>
+            <view class="mx-tabs-list {{isLeft ? 'mx-tabs-list-left' : 'mx-tabs-list-center'}}">
+                <view class="mx-tabs-item {{index == current ? 'mx-tabs-item-current' : ''}}" id="tab-{{index}}" wx:for="{{options}}" wx:key="value" bind:tap="handleItem" data-item="{{item}}" data-idx="{{index}}" style="{{index == current ? 'background:'+currentColor+';' : ''}}{{bgColor ? 'border: 2rpx solid transparent;' : ''}}">
+                    <view class="item-text">
+                        <block wx:if="{{index == current}}">
+                            <view class="icons" wx:if="{{item.iconSelectUrl || item.iconUrl || item.iconName}}">
+                                <image wx:if="{{item.iconSelectUrl || item.iconUrl}}" class="icon" mode="widthFix" src="{{item.iconSelectUrl || item.iconUrl}}" style="width:{{item.iconSize || 32}}rpx;height:{{item.iconSize || 32}}rpx;" />
+                                <mx-icon wx:else name="{{item.iconName}}" color="{{item.iconSelectColor || item.iconColor || textCurrentColor || textColor}}" size="{{item.iconSize || 32}}" />
+                            </view>
+                            <view class="text" style="{{textCurrentColor || textColor ? 'color:'+(textCurrentColor || textColor)+';' : ''}}font-size:{{textSize}}rpx;">{{item.text}}</view>
+                        </block>
+                        <block wx:else>
+                            <view class="icons" wx:if="{{item.iconUrl || item.iconName}}">
+                                <image wx:if="{{item.iconUrl}}" class="icon" mode="widthFix" src="{{item.iconUrl}}" style="width:{{item.iconSize || 32}}rpx;height:{{item.iconSize || 32}}rpx;" />
+                                <mx-icon wx:else name="{{item.iconName}}" color="{{item.iconColor || textColor}}" size="{{item.iconSize || 32}}" />
+                            </view>
+                            <view  class="text" style="{{textColor ? 'color:'+textColor+';' : ''}}font-size:{{textSize}}rpx;">{{item.text}}</view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

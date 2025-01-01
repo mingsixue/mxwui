@@ -1,0 +1,76 @@
+@import url('@common/common.less');
+.mx-list-picker{
+    width: 750rpx;
+    min-height: 92rpx;
+    .picker-wrap-left{
+        flex-grow: 1;
+    }
+    .picker-cons{
+        display: flex;
+        align-items: center;
+        &.picker-cons-left{
+            justify-content: space-between;
+            .txt{
+                flex-grow: 1;
+            }
+        }
+        .arrows{
+            flex-shrink: 0;
+            padding-left: 16rpx;
+        }
+    }
+    .picker-vertical{
+        .vertical-picker{
+            padding: 0 24rpx;
+        }
+        .picker-cons{
+            height: 92rpx;
+            justify-content: space-between;
+        }
+    }
+    .picker-web{
+        display: flex;
+        &.web-horizontal{
+            flex-flow: row;
+            align-items: center;
+            margin-top: 32rpx;
+            .label-wrap{
+                flex-shrink: 0;
+            }
+            .picker-wrap{
+                margin-left: 0;
+                margin-right: 24rpx;
+            }
+            .picker-cons{
+                height: 92rpx;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 24rpx;
+            }
+        }
+        &.web-vertical{
+            flex-flow: column;
+            .picker-cons{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 654rpx;
+                height: 92rpx;
+                padding: 0 24rpx;
+                .txt{
+                    flex-grow: 1;
+                }
+                .arrows{
+                    flex-shrink: 0;
+                }
+            }
+        }
+        .picker-wrap{
+            width: 702rpx;
+            height: 92rpx;
+            margin-left: 24rpx;
+            border-radius: 8rpx;
+        }
+    }
+}

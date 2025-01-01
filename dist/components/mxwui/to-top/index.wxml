@@ -1,0 +1,1 @@
+<view class="mx-totop" style="right:{{right}}rpx;bottom:{{bottom}}rpx;background:{{bgColor}};" bind:tap="handleToTop"><image wx:if="{{iconUrl}}" class="icon" mode="widthFix" src="{{iconUrl}}" /><mx-icon wx:else name="totop" color="{{iconColor}}" size="48" /></view> 

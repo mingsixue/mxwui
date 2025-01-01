@@ -1,0 +1,14 @@
+<mx-dialog-basic wx:if="{{visible}}" visible="{{true}}" showWrapClose="{{false}}" showBack="{{false}}" showClose="{{false}}" zIndex="{{zIndex}}" isCloseMask="{{isCloseMask}}" height="" title="{{title}}" titleColor="{{titleColor}}" bind:dialog_basic_close="handleMaskClose">
+    <view class="mx-dialog-cons">
+        <view class="cons {{title ? 'cons2' : ''}}">
+            <view wx:if="{{content}}" class="content" style="color:{{contentColor}};">{{content}}</view>
+            <slot></slot>
+        </view>
+    </view>
+    <view class="mx-dialog-foot">
+        <view class="mx-dialog-btns {{showMinor ? 'mx-dialog-btns2' : ''}}">
+            <mx-btn wx:if="{{showMinor}}" type="default" themeColor="{{minorBtnColor || MINOR_TEXT_COLOR}}" width="254rpx" bind:tap="handleMinor">{{minorBtnText}}</mx-btn>
+            <mx-btn type="primary" themeColor="{{mainBtnColor || THEME_COLOR}}" width="{{showMinor ? '432rpx' : '702rpx'}}" bind:tap="handleMain">{{mainBtnText}}</mx-btn>
+        </view>
+    </view>
+</mx-dialog-basic>

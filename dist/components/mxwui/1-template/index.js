@@ -1,0 +1,1 @@
+import{COLOR}from"../utils/common";Component({properties:{xxx1:{type:String,value:""},xxx2:{type:Boolean,value:!1},xxx3:{type:Number,value:""},xxx4:{type:Array,value:[]},xxx5:{type:Object,value:[]}},attached(){},ready(){},methods:{handleXXX(){this.triggerEvent("xxx")}}});

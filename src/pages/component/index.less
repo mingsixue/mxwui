@@ -1,0 +1,28 @@
+.pageDemo{
+    min-height: calc(100vh - 36px - 66px);
+    padding-top: 66px;
+    padding-bottom: 110rpx;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 110rpx);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 110rpx);
+    background: #f2f2f2;
+    .wrap{
+        margin-bottom: 24rpx;
+    }
+    .title{
+        padding: 24rpx 24rpx;
+        font-size: 38rpx;
+        font-weight: bold;
+    }
+    .list{
+        margin: 0 48rpx;
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 88rpx;
+            margin-bottom: 24rpx;
+            background: #dedede;
+            border-radius: 4rpx;
+        }
+    }
+}

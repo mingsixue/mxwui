@@ -1,0 +1,31 @@
+@import url('@common/common.less');
+.mx-list-select{
+    .list-select-wrap{
+        padding: 0 24rpx;
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 92rpx;
+            border-bottom: 2rpx solid @BORDER_COLOR;
+            box-sizing: content-box;
+            &:last-child{
+                border-bottom: none;
+            }
+            .text{
+                flex-grow: 1;
+                max-width: 630rpx;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 32rpx;
+            }
+            .icon{
+                flex-shrink: 0;
+            }
+            &.disabled{
+                opacity: 0.5;
+            }
+        }
+    }
+}

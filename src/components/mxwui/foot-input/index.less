@@ -1,0 +1,32 @@
+@import url('@common/common.less');
+.mx-foot-input{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    .foot-input-wrap{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 686rpx;
+        height: 56rpx;
+        padding: 16rpx 32rpx;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: calc(constant(safe-area-inset-bottom) + 16rpx);
+        padding-bottom: calc(env(safe-area-inset-bottom) + 16rpx);
+        .input{
+            flex-grow: 1;
+            width: 546rpx;
+            height: 56rpx;
+            margin-right: 24rpx;
+            padding-left: 20rpx;
+        }
+        .btn{
+            flex-shrink: 0;
+        }
+    }
+}

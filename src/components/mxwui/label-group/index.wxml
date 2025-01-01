@@ -1,0 +1,11 @@
+<view class="mx-label-group">
+    <form-label leftWidth="{{leftWidth}}" label="{{label}}" labelColor="{{labelColor}}" required="{{required}}" requiredPosition="{{requiredPosition}}" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" bind:form_label_firstIcon="handleFirstClick"bind:form_label_lastIcon="handleLastClick" />
+    <view class="label-group-wrap" style="background:{{bgColor}};">
+        <view class="item" wx:for="{{options}}" wx:key="text" bind:tap="handleChange" data-idx="{{index}}">
+            <mx-label wx:if="{{item.disabled}}" type="disabled" text="{{item.text}}" defaultColor="{{textColor}}" selectColor="{{selectColor}}" />
+            <mx-label wx:elif="{{type == 'single'}}" type="{{item.checked ? 'single' : 'default'}}" text="{{item.text}}" defaultColor="{{textColor}}" selectColor="{{selectColor}}" />
+            <mx-label wx:elif="{{type == 'multiple'}}" type="{{item.checked ? 'multiple' : 'default'}}" text="{{item.text}}" defaultColor="{{textColor}}" selectColor="{{selectColor}}" />
+        </view>
+    </view>
+    <form-desc desc="{{desc}}" descColor="{{descColor}}" />
+</view>

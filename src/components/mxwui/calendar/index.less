@@ -1,0 +1,263 @@
+@import url('@common/common.less');
+.mx-calendar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    .mx-calendar-cons{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100vw;
+        background: @WHITE_COLOR;
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+        .titles{
+            position: relative;
+            height: 104rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cancel{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                padding: 0 32rpx;
+                height: 104rpx;
+                color: @PLACEHOLDER_COLOR;
+                font-size: 32rpx;
+            }
+            .confirm{
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                padding: 0 32rpx;
+                height: 104rpx;
+                color: @THEME_COLOR;
+                font-size: 32rpx;
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 104rpx;
+                color: #040A23;
+                font-size: 36rpx;
+                font-weight: bold;
+            }
+        }
+        .tools{
+            position: relative;
+            height:96rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .month{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: @TEXT_COLOR;
+                font-size: 32rpx;
+                font-weight: bold;
+            }
+            .prev,.next{
+                position: absolute;
+                top: 0;
+                height: 96rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .prevMonth,.prevYear,
+                .nextMonth,.nextYear{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10rpx;
+                    width: 70rpx;
+                    height: 96rpx;
+                }
+            }
+            .prev{
+                left: 48rpx;
+            }
+            .next{
+                right: 48rpx;
+            }
+        }
+        .weeks{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 96rpx;
+            padding: 0 32rpx;
+            box-shadow: inset 0px -1px 0px 0px @BORDER_COLOR;
+            .week{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 98rpx;
+                height: 96rpx;
+                color: @TEXT_COLOR;
+                font-size: 28rpx;
+            }
+        }
+        .days{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 32rpx;
+            padding: 0 32rpx 32rpx 32rpx;
+            .day{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-flow: column;
+                width: 98rpx;
+                height: 88rpx;
+                color: @TEXT_COLOR;
+                font-size: 36rpx;
+            }
+            .now{
+                color: @THEME_COLOR;
+            }
+            .empty{
+                background: transparent;
+            }
+            .range{
+                background: fade(@THEME_COLOR, 15%);
+            }
+            .checked{
+                background: @THEME_COLOR;
+                border-radius: 4rpx;
+                color: @WHITE_COLOR;
+            }
+            .disabled{
+                color: @PLACEHOLDER_COLOR;
+                background: fade(@PLACEHOLDER_COLOR, 10%);
+            }
+            .unclick{
+                color: @PLACEHOLDER_COLOR;
+            }
+            .txt{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 98rpx;
+                height: 88rpx;
+            }
+            .label{
+                display: none;
+            }
+            &.days-range{
+                .day{
+                    height: 98rpx;
+                }
+                .start{
+                    &::after{
+                        content: '开始';
+                        position: absolute;
+                        top: 2rpx;
+                        left: 0;
+                        width: 100%;
+                        font-size: 16rpx;
+                        text-align: center;
+                        color: @WHITE_COLOR;
+                    }
+                    .txt{
+                        position: relative;
+                        top: 8rpx;
+                        color: @WHITE_COLOR;
+                    }
+                }
+                .end{
+                    &::after{
+                        content: '结束';
+                        position: absolute;
+                        top: 2rpx;
+                        left: 0;
+                        width: 100%;
+                        font-size: 16rpx;
+                        text-align: center;
+                        color: @WHITE_COLOR;
+                    }
+                    .txt{
+                        position: relative;
+                        top: 8rpx;
+                        color: @WHITE_COLOR;
+                    }
+                }
+                .startend{
+                    &::after{
+                        content: '开始/结束';
+                        position: absolute;
+                        top: 2rpx;
+                        left: 0;
+                        width: 100%;
+                        font-size: 16rpx;
+                        text-align: center;
+                        color: @WHITE_COLOR;
+                    }
+                    .txt{
+                        position: relative;
+                        top: 8rpx;
+                        color: @WHITE_COLOR;
+                    }
+                }
+            }
+            &.days-lunar{
+                .day{
+                    height: 102rpx;
+                }
+                .start,.end{
+                    .txt{
+                        position: relative;
+                        top: 10rpx;
+                    }
+                }
+                .checked{
+                    .solarTerm,.festival{
+                        color: @WHITE_COLOR;
+                    }
+                }
+                .disabled,.unclick{
+                    .label,.solarTerm,.festival{
+                        color: @PLACEHOLDER_COLOR;
+                    }
+                    &.checked{
+                        .txt,.label,.solarTerm,.festival{
+                            color: @WHITE_COLOR;
+                        }
+                    }
+                }
+                .txt{
+                    height: 78rpx;
+                }
+                .label{
+                    display: block;
+                    flex-shrink: 0;
+                    width: 100%;
+                    height: 30rpx;
+                    margin-bottom: 8rpx;
+                    text-align: center;
+                    font-size: 20rpx;
+                }
+                .solarTerm{
+                    color: @THEME_COLOR;
+                }
+                .festival{
+                    color: @THEME_COLOR;
+                }
+            }
+        }
+    }
+}

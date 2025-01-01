@@ -1,0 +1,196 @@
+<view class="pageDemo">
+    <mx-nav title="引导组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>引导组件（示例）</title>
+    <desc>组件名称：Lead</desc>
+    <desc>适用于新功能引导、功能强调等场景。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示</title>
+        <desc>属性：visible</desc>
+
+        <mx-lead visible="{{visible}}" top="{{top}}" left="{{left}}" width="{{width}}" height="{{height}}" text="新功能引导哦～" tipsWidth="230" tipsTop="{{tipstop}}" tipsLeft="-20" radius="4" bind:lead_close="handleClose" />
+
+        <view class="cons">
+            <view class="look" bind:tap="handleVisible" data-cls="look" data-tipstop="100">
+                <mx-btn width="140rpx" small>查看样式</mx-btn>
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">留白区距离顶部距离</title>
+        <desc>属性：top，只支持px</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">留白区距离左侧距离</title>
+        <desc>属性：left，只支持px</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">留白区宽度</title>
+        <desc>属性：width，只支持px</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">留白区高度</title>
+        <desc>属性：height，只支持px</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">留白区圆角</title>
+        <desc>属性：radius</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示蒙层</title>
+        <desc>属性：showMask</desc>
+
+        <mx-lead visible="{{visibleMask}}" top="{{top}}" left="{{left}}" width="{{width}}" height="{{height}}" text="新功能引导哦～" tipsTop="{{tipstop}}" tipsLeft="{{tipsleft}}" tipsWidth="230" radius="4" tipsArrowsTop="{{tipsArrowsTop}}" tipsArrowsLeft="{{tipsArrowsLeft}}" showMask="{{false}}" tipsBgColor="#040A23" textColor="#FFF" bind:lead_close="handleClose" />
+
+        <view class="cons">
+            <view class="mask" bind:tap="handleVisibleMask" data-cls="mask" data-tipstop="-8" data-tipsleft="190" data-arrowstop="16" data-arrowsleft="-18">
+                <mx-btn width="160rpx" small>不显示蒙层</mx-btn>
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">蒙层透明度</title>
+        <desc>属性：opacity，0-1，默认0.5</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">引导文案</title>
+        <desc>属性：text</desc>
+        <desc>属性：textColor，引导文案文本色</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips箭头方向</title>
+        <desc>属性：tipsDirection，top / left / bottom / right</desc>
+
+        <mx-lead visible="{{visibleArrows}}" tipsDirection="{{tipsDirection}}" top="{{top}}" left="{{left}}" width="{{width}}" height="{{height}}" text="新功能引导哦～" tipsTop="{{tipstop}}" tipsLeft="{{tipsleft}}" tipsWidth="230" radius="4" tipsArrowsTop="{{tipsArrowsTop}}" tipsArrowsLeft="{{tipsArrowsLeft}}" bind:lead_close="handleClose" />
+
+        <view class="cons">
+            <view class="top" bind:tap="handleVisibleArrows" data-cls="top" data-tipstop="88" data-tipsleft="-8" data-arrowstop="-20" data-arrowsleft="70">
+                <mx-btn width="160rpx" small>箭头向上</mx-btn>
+            </view>
+            <view class="space"></view>
+            <view class="bottom" bind:tap="handleVisibleArrows" data-cls="bottom" data-tipstop="-106" data-tipsleft="-30" data-arrowstop="68" data-arrowsleft="90">
+                <mx-btn width="160rpx" small>箭头向下</mx-btn>
+            </view>
+            <view class="space"></view>
+            <view class="right" bind:tap="handleVisibleArrows" data-cls="right" data-tipstop="-4" data-tipsleft="-300" data-arrowstop="16" data-arrowsleft="260">
+                <mx-btn width="160rpx" small>箭头向右</mx-btn>
+            </view>
+        </view>
+        <view class="cons">
+            <view class="left" bind:tap="handleVisibleArrows" data-cls="left" data-tipstop="-8" data-tipsleft="190" data-arrowstop="16" data-arrowsleft="-18">
+                <mx-btn width="160rpx" small>箭头向左</mx-btn>
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips距离引导top距离</title>
+        <desc>属性：tipsTop</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips距离引导left距离</title>
+        <desc>属性：tipsLeft</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips宽度</title>
+        <desc>属性：tipsWidth</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips箭头top距离</title>
+        <desc>属性：tipsArrowsTop</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips箭头left距离</title>
+        <desc>属性：tipsArrowsLeft</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips文本前图标</title>
+        <desc>属性：tipsIcon</desc>
+
+        <mx-lead visible="{{visibleIcon}}" tipsDirection="left" top="{{top}}" left="{{left}}" width="{{width}}" height="{{height}}" text="新功能引导哦～" tipsTop="{{tipstop}}" tipsLeft="{{tipsleft}}" tipsWidth="230" radius="4" tipsArrowsTop="{{tipsArrowsTop}}" tipsArrowsLeft="{{tipsArrowsLeft}}" tipsIcon="{{tipsIcon}}" bind:lead_close="handleClose" />
+
+        <view class="cons">
+            <view class="icon" bind:tap="handleVisibleIcon" data-cls="icon" data-tipstop="-8" data-tipsleft="190" data-arrowstop="16" data-arrowsleft="-18">
+                <mx-btn width="160rpx" small>自定义图标</mx-btn>
+            </view>
+            <view class="space"></view>
+            <view class="icon2" bind:tap="handleVisibleIcon" data-cls="icon2" data-tipstop="-8" data-tipsleft="190" data-arrowstop="16" data-arrowsleft="-18">
+                <mx-btn width="160rpx" small>自定义图片</mx-btn>
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">tips背景色</title>
+        <desc>属性：tipsBgColor</desc>
+
+        <mx-lead visible="{{visibleBgColor}}" tipsDirection="top" top="{{top}}" left="{{left}}" width="{{width}}" height="{{height}}" text="新功能引导哦～" tipsTop="{{tipstop}}" tipsLeft="{{tipsleft}}" tipsWidth="230" radius="4" tipsArrowsTop="{{tipsArrowsTop}}" tipsArrowsLeft="{{tipsArrowsLeft}}" bind:lead_close="handleClose" tipsBgColor="#040A23" textColor="#FFF" />
+
+        <view class="cons">
+            <view class="bgcolor" bind:tap="handleVisibleBgColor" data-cls="bgcolor" data-tipstop="88" data-tipsleft="-8" data-arrowstop="-20" data-arrowsleft="70">
+                <mx-btn width="190rpx" small>自定义背景色</mx-btn>
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">点击蒙层是否可以关闭</title>
+        <desc>属性：isCloseMask</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">引导内容完全自定义</title>
+        <desc>使用slot方式</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:lead_close，引导关闭回调事件</desc>
+    </wrap>
+    <line />
+</view>

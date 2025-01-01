@@ -1,0 +1,1 @@
+import{COLOR}from"../utils/common";Component({properties:{bgColor:{type:String,value:COLOR.WHITE_COLOR},zIndex:{type:Number,value:1}}});

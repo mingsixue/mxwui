@@ -1,0 +1,35 @@
+@import url('@common/common.less');
+.mx-upload-group{
+    padding: 0 24rpx;
+    .upload-group-wrap{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &.upload-group-column3{
+            .item{
+                width: 223rpx;
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+        &.upload-group-column4{
+            .item{
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+            }
+        }
+        &.upload-group-column5{
+            .item{
+                &:nth-child(5n) {
+                    margin-right: 0;
+                }
+            }
+        }
+        .item{
+            margin-right: 16rpx;
+            margin-bottom: 16rpx;
+        }
+    }
+}

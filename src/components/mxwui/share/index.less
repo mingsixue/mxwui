@@ -1,0 +1,82 @@
+@import url('@common/common.less');
+
+.mx-dialog-headimg{
+    display: block;
+    width: 100vw;
+}
+.mx-dialog-head{
+    display: block;
+    padding: 32rpx 48rpx;
+    background: linear-gradient(180deg, #FAFBFC 0%, #F0F3F6 100%);
+    &.mx-dialog-head2{
+        .desc{
+            margin-top: 8rpx;
+        }
+    }
+    .title{
+        font-size: 36rpx;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: @TEXT_COLOR;
+    }
+    .desc{
+        font-size: 32rpx;
+        color: @MINOR_TEXT_COLOR;
+        line-height: 44rpx;
+    }
+}
+
+.mx-dialog-cons{
+    .list{
+        display: flex;
+        align-items: center;
+        height: 240rpx;
+        background: @BG_COLOR;
+        .item{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            margin: 0;
+            padding: 0;
+            color: @TEXT_COLOR;
+            font-weight: normal;
+        }
+        .icon{
+            width: 108rpx;
+            height: 108rpx;
+            margin-bottom: 16rpx;
+        }
+        .icon-wechat{
+            background: url(http://cdn.mingsixue.com/xcx/MXWUI/share_wechat.png) no-repeat;
+            background-size: cover;
+        }
+        .icon-friends{
+            background: url(http://cdn.mingsixue.com/xcx/MXWUI/share_friends.png) no-repeat;
+            background-size: cover;
+        }
+        .icon-qrcode{
+            background: url(http://cdn.mingsixue.com/xcx/MXWUI/share_qrcode.png) no-repeat;
+            background-size: cover;
+        }
+        .icon-copylink{
+            background: url(http://cdn.mingsixue.com/xcx/MXWUI/share_link.png) no-repeat;
+            background-size: cover;
+        }
+        .txt{
+            font-size: 24rpx;
+            font-weight: none;
+            color: @TEXT_COLOR;
+            text-align: center;
+        }
+    }
+    .cancel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 96rpx;
+        font-size: 36rpx;
+        color: @PLACEHOLDER_COLOR;
+    }
+}

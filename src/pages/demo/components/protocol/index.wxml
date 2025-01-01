@@ -1,0 +1,85 @@
+<view class="pageDemo">
+    <mx-nav title="协议组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>协议组件（示例）</title>
+    <desc>组件名称：Protocol</desc>
+    <desc>适用于一些需要用户确认或同意协议后才能操作的场景。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">文案内容</title>
+        <desc>属性：content，数组形式，提供多段文本</desc>
+        <desc>属性：content[x].text，内容</desc>
+        <desc>属性：content[x].color，文本颜色</desc>
+        <view class="cons">
+            <mx-protocol content="{{content}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+
+        <view class="cons">
+            <mx-protocol content="{{content2}}" 
+            changeChecked="{{false}}" 
+            bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否选中</title>
+        <desc>属性：checked</desc>
+
+        <view class="cons">
+            <mx-protocol checked="{{true}}" content="{{content}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否禁用</title>
+        <desc>属性：disabled</desc>
+
+        <view class="cons">
+            <mx-protocol disabled="{{true}}" content="{{content}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">复选框颜色</title>
+        <desc>属性：checkboxColor，未选中颜色</desc>
+        <desc>属性：checkboxSelectColor，选中颜色</desc>
+
+        <view class="cons">
+            <mx-protocol checkboxColor="#000" checkboxSelectColor="#1677FF" content="{{content}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">复选框大小</title>
+        <desc>属性：checkboxSize，默认32</desc>
+
+        <view class="cons">
+            <mx-protocol checkboxSize="48" checked content="{{content}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">点击文本是否可以选中或取消</title>
+        <desc>属性：changeChecked，默认可操作</desc>
+
+        <view class="cons">
+            <mx-protocol changeChecked content="{{content3}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+
+        <view class="cons">
+            <mx-protocol changeChecked="{{false}}" checked content="{{content4}}" bind:protocol_change="handleChange" bind:protocol_click="handleTap" />
+        </view>
+    </wrap>
+    <line />
+
+</view>

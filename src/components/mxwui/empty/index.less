@@ -1,0 +1,34 @@
+@import url('@common/common.less');
+.mx-empty {
+    .icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        .icon{
+            display: block;
+        }
+    }
+    .text{
+        font-size: 36rpx;
+        color: @PLACEHOLDER_COLOR;
+        text-align: center;
+    }
+    .desc{
+        margin-top: 8rpx;
+        font-size: 28rpx;
+        color: @PLACEHOLDER_COLOR;
+        text-align: center;
+    }
+    .btns{
+        margin-top: 48rpx;
+        padding: 0 106rpx;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &.center{
+            justify-content: center;
+        }
+    }
+}

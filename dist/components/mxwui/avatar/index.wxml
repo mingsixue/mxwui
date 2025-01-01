@@ -1,0 +1,1 @@
+<view class="mx-avatar" bind:tap="handleTap"><image class="avatar" mode="widthFix" src="{{url}}" style="width:{{size}}rpx;height:{{size}}rpx;{{round ? 'border-radius:100%;' : 'border-radius:'+radius+'rpx;'}}border:{{borderWeight}}rpx solid {{borderColor}};" /><slot></slot></view> 

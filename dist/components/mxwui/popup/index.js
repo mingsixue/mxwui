@@ -1,0 +1,1 @@
+Component({properties:{visible:{type:Boolean,value:!1},type:{type:String,value:"right"},width:{type:String,value:"80vw"},zIndex:{type:Number,value:1},isCloseMask:{type:Boolean,value:!0}},methods:{handleMask(){this.data.isCloseMask&&(this.setData({visible:!1}),this.triggerEvent("popup_close"))}}});

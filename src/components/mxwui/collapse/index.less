@@ -1,0 +1,30 @@
+@import url('@common/common.less');
+.mx-collapse{
+    .collapse-item{
+        background: @WHITE_COLOR;
+        .collapse-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 50rpx;
+            padding: 24rpx 24rpx;
+            border-top: 2rpx solid @BORDER_COLOR;
+            .title{
+                font-size: 32rpx;
+            }
+            .icon{
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+            }
+        }
+        .collapse-con{
+            border-top: 2rpx solid @BORDER_COLOR;
+            padding: 24rpx;
+            min-height: 42rpx;
+            color: @MINOR_TEXT_COLOR;
+            font-size: 28rpx;
+            line-height: 1.4;
+        }
+    }
+}

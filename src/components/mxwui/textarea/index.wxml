@@ -1,0 +1,16 @@
+<view class="mx-textareas">
+    <view class="{{styleType == 'web' && horizontal ? 'web-horizontal' : ''}}">
+        <form-label horizontal="{{styleType == 'web' && horizontal ? true : false}}" leftWidth="{{styleType == 'web' && horizontal ? leftWidth : ''}}" label="{{label}}" labelColor="{{labelColor}}" labelAlign="{{styleType == 'web' && horizontal ? labelAlign : ''}}" required="{{required}}" requiredPosition="{{requiredPosition}}" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" bind:form_label_firstIcon="handleFirstClick"bind:form_label_lastIcon="handleLastClick" />
+        <view class="mx-textarea {{styleType == 'web' ? 'mx-textarea-web' : ''}} {{styleType == 'web' && label ? 'mx-textarea-web2' : ''}} {{disabled ? 'mx-textarea-disabled' :''}}">
+            <view class="textarea-wrap" style="background:{{bgColor}};">
+                <textarea class="textarea" style="{{height ? 'height:'+height+'rpx;' : ''}}color:{{textColor}};{{disabled ? 'opacity:'+0.6+';' : ''}}" value="{{value}}" placeholder="{{placeholder}}" placeholder-style="{{placeholderColor ? 'color:'+placeholderColor+';' : ''}}" disabled="{{disabled}}" maxlength="{{maxLength}}" auto-focus="{{autoFocus}}" auto-height="{{autoHeight}}" cursor-spacing="{{cursorSpacing}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" disable-default-padding="{{disableDefaultPadding}}" confirm-type="{{confirmType}}" confirm-hold="{{confirmHold}}" adjust-keyboard-to="{{adjustKeyboardTo}}" bind:input="inputChange" bind:focus="inpuFocus" bind:blur="inputBlur" bind:linechange="inputLineChange" bind:confirm="inputConfirm" bind:keyboardheightchange="inputKeyboardHeightChange" />
+            </view>
+            <view wx:if="{{showLimit && !disabled}}" class="limit" style="background:{{bgColor}};">
+                <view class="limit-before {{len >= 1 && len < limit ? 'normalColor' : ''}} {{len >= limit ? 'limitColor' : ''}}">{{len || 0}}</view>
+                <view class="limit-line">/</view>
+                <view class="limit-after">{{limit}}</view>
+            </view>
+        </view>
+    </view>
+    <form-desc desc="{{desc}}" descColor="{{descColor}}" />
+</view>

@@ -1,0 +1,3 @@
+<view class="mx-switch">
+    <switch type="switch" checked="{{checked}}" disabled="{{disabled}}" color="{{color}}" bind:change="changeSwitch" />
+</view>

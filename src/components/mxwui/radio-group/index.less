@@ -1,0 +1,65 @@
+@import url('@common/common.less');
+.mx-radio-group{
+    .mx-radio-group-wrap{
+        position: relative;
+        &.radio-line{
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 24rpx;
+                width: 702rpx;
+                height: 2rpx;
+                background: @BORDER_COLOR;
+            }
+        }
+        .radio-group-normal{
+            .group{
+                .group-item{
+                    min-height: 92rpx;
+                }
+            }
+        }
+        .web-horizontal{
+            display: flex;
+            align-items: center;
+            margin-top: 32rpx;
+            margin-right: 24rpx;
+            .group{
+                flex-grow: 1;
+                border-radius: 8rpx;
+                .group-item{
+                    min-height: 92rpx;
+                }
+            }
+        }
+        .web-vertical{
+            .group{
+                margin: 0 24rpx;
+                padding: 0 24rpx;
+                border-radius: 8rpx;
+                .group-item{
+                    margin-left: 0;
+                    margin-right: 24rpx;
+                    min-height: 92rpx;
+                }
+            }
+        }
+    }
+    .group{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .group-item{
+            display: flex;
+            align-items: center;
+            margin-left: 24rpx;
+        }
+        &.group-horizontal{
+            .group-item{
+                margin-left: 0;
+                margin-right: 24rpx;
+            }
+        }
+    }
+}

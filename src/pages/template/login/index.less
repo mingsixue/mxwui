@@ -1,0 +1,128 @@
+@import url('@common/common.less');
+.pageLogin {
+    height: 100vh;
+    background: #f1f4f1;
+    overflow: hidden;
+
+    .heads {
+        position: relative;
+        height: 358rpx;
+        background: #2fc178;
+        .avatars {
+            position: relative;
+            width: 168rpx;
+            height: 168rpx;
+            margin: 52rpx auto;
+            background: linear-gradient(180deg, #e2f6ec 0%, #c1ead5 100%);
+            border-radius: 50%;
+        }
+        .avatar {
+            width: 168rpx;
+            height: 168rpx;
+            border-radius: 50%;
+        }
+        .default {
+            position: relative;
+            width: 168rpx;
+            height: 168rpx;
+            background: url('@{img}avatar.png') no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+        }
+        .upload {
+            position: absolute;
+            bottom: -8rpx;
+            right: 10rpx;
+            width: 52rpx;
+            height: 52rpx;
+            background: url('@{img}icon_photo.png') no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.infos {
+    position: relative;
+    z-index: 2;
+    margin-top: -58rpx;
+    width: 750rpx;
+    height: 1038rpx;
+    padding-top: 50rpx;
+    background: linear-gradient(180deg, #f9fafa 0%, #f1f4f1 100%);
+    border-radius: 28rpx 28rpx 0rpx 0rpx;
+    .txt {
+        display: block;
+        width: 630rpx;
+        margin: 0 auto;
+        font-size: 26rpx;
+        color: #999999;
+        line-height: 36rpx;
+    }
+    .rows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24rpx;
+        .label {
+            width: 180rpx;
+            margin-right: 16rpx;
+            color: #666;
+            font-size: 28rpx;
+            text-align: right;
+        }
+        .input {
+            width: 460rpx;
+            height: 80rpx;
+            padding-left: 12rpx;
+            background: #FFFFFF;
+            border-radius: 8rpx;
+            border: 2rpx solid #e1f8ed;
+            font-size: 28rpx;
+        }
+        .vals {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 472rpx;
+            height: 80rpx;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;
+            background: transparent;
+            color: #2fc178;
+            font-size: 30rpx;
+        }
+    }
+    .btnLogin {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 686rpx;
+        height: 80rpx;
+        margin: 58rpx auto 0;
+        background: #2fc178;
+        box-shadow: 0rpx 0rpx 10rpx 0rpx rgba(154, 154, 154, 0.17);
+        border-radius: 60rpx;
+        font-size: 36rpx;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .btnCancel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 686rpx;
+        height: 80rpx;
+        margin: 40rpx auto 0;
+        border-radius: 60rpx;
+        border: 2rpx solid #2fc178;
+        font-size: 36rpx;
+        font-weight: bold;
+        color: #2fc178;
+    }
+}

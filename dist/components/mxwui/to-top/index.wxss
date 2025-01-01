@@ -1,0 +1,1 @@
+.mx-totop{position:fixed;display:flex;align-items:center;justify-content:center;width:80rpx;height:80rpx;box-shadow:0 6rpx 16rpx 0 rgba(27,27,78,.1);border:2rpx solid #eee;border-radius:50%;box-sizing:content-box;overflow:hidden}.mx-totop .icon{max-width:80rpx}

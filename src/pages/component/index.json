@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mx-nav": "/components/mxwui/nav/index",
+    "menus": "/components/menus/index"
+  }
+}

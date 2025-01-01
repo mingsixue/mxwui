@@ -1,0 +1,100 @@
+@import url('@common/common.less');
+.mx-time-range{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    .mx-cons{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100vw;
+        background: @WHITE_COLOR;
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+        .titles{
+            position: relative;
+            height: 104rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .cancel{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                padding: 0 32rpx;
+                height: 104rpx;
+                color: @PLACEHOLDER_COLOR;
+                font-size: 32rpx;
+            }
+            .confirm{
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                padding: 0 32rpx;
+                height: 104rpx;
+                color: @THEME_COLOR;
+                font-size: 32rpx;
+            }
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 104rpx;
+                color: #040A23;
+                font-size: 36rpx;
+                font-weight: bold;
+            }
+        }
+        .tools{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .item{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 96rpx;
+                color: @MINOR_TEXT_COLOR;
+            }
+        }
+    }
+    .pickerWrap{
+        position: relative;
+        height: 480rpx;
+        overflow: hidden;
+        .picker{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100vw;
+            height: 480rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            
+            .rows{
+                flex: 1;
+                height: 480rpx;
+                .item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 96rpx;
+                }
+            }
+        }
+    }
+}

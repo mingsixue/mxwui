@@ -1,0 +1,31 @@
+<view class="mx-notice" wx:if="{{visible}}">
+    <view class="mx-notice-wrap mx-notice-{{styleType}} {{ellipsis ? 'mx-notice-ellipsis' : ''}}" style="background:{{bgColor}};" bind:tap="handleView">
+        <view wx:if="{{styleType == 'default' || styleType == 'roll'}}" class="first-icon">
+            <mx-icon name="message2" color="{{iconColor}}" size="{{iconSize}}" />
+        </view>
+        <view wx:if="{{styleType == 'operate' && showClose}}" class="first-icon" catch:tap="handleClose">
+            <mx-icon name="close" color="{{iconColor}}" size="{{iconSize}}" />
+        </view>
+
+        <view wx:if="{{styleType == 'roll' && rollType == 'marquee'}}" class="contents contents-marquee">
+            <view class="text" style="color:{{textColor}};animation: marquee {{rollSpeed}} linear infinite">{{text}}</view>
+        </view>
+        <view wx:elif="{{styleType == 'roll' && rollType == 'vertical'}}" class="contents contents-vertical">
+            <swiper class="vertical-cons" autoplay="{{true}}" interval="{{interval}}" circular="{{true}}" vertical="{{true}}">
+                <swiper-item class="vertical-item" wx:for="{{message}}" wx:key="text">
+                    <view class="text" style="color:{{textColor}};">{{item.text}}</view>
+                </swiper-item>
+            </swiper>
+        </view>
+        <view wx:else class="contents">
+            <view class="text {{ellipsis ? 'text-ellipsis' : ''}}" style="color:{{textColor}};">{{text}}</view>
+
+            <view wx:if="{{styleType == 'operate' && showBtn}}" class="btn">
+                <mx-btn type="{{btnType}}" small themeColor="{{btnColor}}" width="{{btnWidth}}" catch:tap="handleBtn">{{btnText}}</mx-btn>
+            </view>
+            <view wx:if="{{styleType == 'operate' && arrows}}" class="last-icon">
+                <mx-icon name="arrows_right" color="{{iconColor}}" size="{{iconSize}}" />
+            </view>
+        </view>
+    </view>
+</view>

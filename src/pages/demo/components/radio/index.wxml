@@ -1,0 +1,147 @@
+<view class="pageDemo">
+    <mx-nav title="单选框组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>单选框组件（示例）</title>
+    <desc>组件名称：Radio</desc>
+    <desc>用于互斥选项之间的选择，一般用于在一组选项中选择一个值。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">文案</title>
+        <desc>属性：text</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="标签" bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">文案颜色</title>
+        <desc>属性：textColor</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="标签" textColor="#1677FF" bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否选中</title>
+        <desc>属性：checked</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="选中" checked bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否禁用</title>
+        <desc>属性：disabled</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="未选中禁用" disabled bind:radio_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-radio text="选中禁用" checked disabled bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单选框位置</title>
+        <desc>属性：radioPosition：after / before</desc>
+
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="标签" bind:radio_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-radio text="标签" checked bind:radio_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-radio text="标签" disabled bind:radio_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-radio text="标签" checked disabled bind:radio_change="handleChange" />
+            </view>
+        </view>
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="标签" radioPosition="after" />
+            </view>
+            <view class="item">
+                <mx-radio text="标签" radioPosition="after" checked />
+            </view>
+            <view class="item">
+                <mx-radio text="标签" radioPosition="after" disabled />
+            </view>
+            <view class="item">
+                <mx-radio text="标签" radioPosition="after" checked disabled />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单选框颜色</title>
+        <desc>属性：radioColor，未选中颜色</desc>
+        <desc>属性：radioSelectColor，选中颜色</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="未选中颜色自定义" radioColor="#000" bind:radio_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-radio text="选中颜色自定义" checked radioSelectColor="#1677FF" bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单选框大小</title>
+        <desc>属性：radioSize，默认 48</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="自定义大小" radioSize="32" checked bind:radio_change="handleChange" />
+            </view>
+        </view>
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="自定义大小" radioSize="60" checked bind:radio_change="handleChange" />
+            </view>
+        </view>
+        <view class="cons">
+            <view class="item">
+                <mx-radio text="自定义大小" radioSize="60" disabled bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">只有单选框</title>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-radio bind:radio_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+</view>

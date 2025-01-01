@@ -1,0 +1,27 @@
+<view class="mx-swiper" style="width:{{width}};{{radius?'border-radius:'+radius+'rpx;':''}}">
+    <swiper
+        class="swiper-wrap"
+        indicator-dots="{{false}}"
+        autoplay="{{autoplay}}"
+        current="{{current}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        circular="{{circular}}"
+        easing-function="{{easingFunction}}"
+        display-multiple-items="{{displayMultipleItems}}"
+        previous-margin="{{previousMargin}}"
+        next-margin="{{nextMargin}}"
+        style="width:{{width}};height:{{height}};"
+        bind:change="handleChange"
+        bind:transition="bindTransition"
+        bind:animationfinish="bindAnimationFinish"
+    >
+        <swiper-item class="swiper-item" wx:for="{{options}}" wx:key="index" style="height:{{height}};" catch:tap="handleItem" data-item="{{item}}" data-idx="{{index}}"
+        >
+            <image class="item-img" mode="widthFix" src="{{item.img}}" style="width:{{width}};height:{{height}};{{radius?'border-radius:'+radius+'rpx;':''}}" />
+        </swiper-item>
+    </swiper>
+    <view wx:if="{{showDots}}" class="dots" style="bottom:{{dotBottom}}rpx;">
+        <view class="dots-item dots-shape-{{dotShape}}" wx:for="{{options}}" wx:key="index" style="background:{{index == current ? dotActiveColor : dotColor}};{{dotWidth ? 'width:'+dotWidth+'rpx;' : ''}}{{dotHeight ? 'height:'+dotHeight+'rpx;' : ''}}{{dotRadius ? 'border-radius:'+dotRadius+'rpx;' : ''}}border: 2rpx solid {{index == current ? dotBorderActiveColor : dotBorderColor}};"></view>
+    </view>
+</view>

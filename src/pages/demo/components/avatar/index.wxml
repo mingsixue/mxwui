@@ -1,0 +1,117 @@
+<view class="pageDemo">
+    <mx-nav title="头像组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>头像组件（示例）</title>
+    <desc>组件名称：Avatar</desc>
+    <desc>适用于需要展示用户头像的地方。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基本用法</title>
+        <desc>默认头像</desc>
+        <view class="cons">
+            <mx-avatar round="{{false}}" />
+            <view class="space"></view>
+            <mx-avatar />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">头像地址</title>
+        <desc>属性：url</desc>
+
+        <view class="cons">
+            <mx-avatar round="{{false}}" url="http://cdn.mingsixue.com/xcx/MXWUI/temp/avatar.jpg" />
+            <view class="space"></view>
+            <mx-avatar url="http://cdn.mingsixue.com/xcx/MXWUI/temp/avatar.jpg" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">头像大小</title>
+        <desc>属性：size，默认140</desc>
+
+        <view class="cons">
+            <mx-avatar round="{{false}}" size="36" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" size="48" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" size="72" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" size="120" />
+        </view>
+        <view class="cons">
+            <mx-avatar size="36" />
+            <view class="space"></view>
+            <mx-avatar size="48" />
+            <view class="space"></view>
+            <mx-avatar size="72" />
+            <view class="space"></view>
+            <mx-avatar size="120" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否圆形</title>
+        <desc>属性：round</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">圆角</title>
+        <desc>属性：radius，适用于方形头像</desc>
+
+        <view class="cons">
+            <mx-avatar round="{{false}}" radius="4" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" radius="8" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" radius="16" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" radius="32" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">边框</title>
+        <desc>属性：borderColor，边框颜色，默认 #FFF</desc>
+        <desc>属性：borderWeight，边框粗细，默认 2</desc>
+        <view class="cons">
+            <mx-avatar round="{{false}}" borderWeight="4" borderColor="#CA0E2D" />
+            <view class="space"></view>
+            <mx-avatar borderWeight="4" borderColor="#CA0E2D" />
+            <view class="space"></view>
+            <mx-avatar round="{{false}}" borderWeight="0" url="http://cdn.mingsixue.com/xcx/MXWUI/temp/avatar.jpg" />
+            <view class="space"></view>
+            <mx-avatar borderWeight="0" url="http://cdn.mingsixue.com/xcx/MXWUI/temp/avatar.jpg" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">头像上层自定义元素</title>
+        <desc>通过 slot 方式，内部可通过元素进行定位</desc>
+        <view class="cons">
+            <mx-avatar round="{{false}}" borderWeight="4" borderColor="#CA0E2D">
+                <view class="level">
+                    <mx-level level="2" />
+                </view>
+            </mx-avatar>
+            <view class="space"></view>
+            <mx-avatar borderWeight="4" borderColor="#CA0E2D">
+                <view class="level">
+                    <mx-level level="4" bgColor="#000" />
+                </view>
+            </mx-avatar>
+        </view>
+    </wrap>
+    <line />
+</view>

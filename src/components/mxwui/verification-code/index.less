@@ -1,0 +1,61 @@
+@import url('@common/common.less');
+.mx-verification-code{
+    .dialog-cons{
+        margin-bottom: 48rpx;
+        .infos{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40rpx;
+            .left{
+                .txt{
+                    font-size: 28rpx;
+                    color: @PLACEHOLDER_COLOR;
+                }
+                .phone{
+                    margin-top: 4rpx;
+                    font-size: 32rpx;
+                    font-weight: bold;
+                    color: @TEXT_COLOR;
+                }
+            }
+        }
+        .codes{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40rpx;
+            &.codes-digit4{
+                padding: 0 100rpx;
+            }
+            .captcha-input{
+                width: 104rpx;
+                height: 104rpx;
+                border-radius: 4rpx;
+                background: #f4f6f7;
+                border: 2rpx solid #f4f6f7;
+                text-align: center;
+                color: @TEXT_COLOR;
+                font-size: 56rpx;
+                font-weight: bold;
+                margin-right: 26rpx;
+                box-sizing: content-box;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .form-input{
+        flex-grow: 1;
+        height: 92rpx;
+        font-size: 32rpx;
+        color: @TEXT_COLOR;
+    }
+    .desc{
+        padding: 12rpx 24rpx 24rpx;
+        font-size: 24rpx;
+        line-height: 40rpx;
+        color: #656979;
+    }
+}

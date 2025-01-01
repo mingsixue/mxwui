@@ -1,0 +1,215 @@
+<view class="pageDemo">
+    <mx-nav title="验证码组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>验证码组件（示例）</title>
+    <desc>组件名称：VerificationCode</desc>
+    <desc>适用于手机号验证码发送、输入和确认场景。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">样式类型</title>
+        <desc>属性：styleType：dialog 弹窗类型 / form 表单类型</desc>
+
+        <desc>form 表单类型</desc>
+        <mx-verification-code styleType="form" label="验证码" required bind:verification_code_confirm="handleConfirm" />
+        <line />
+
+        <mx-verification-code styleType="dialog" visible="{{visible}}" phone="13100000000" bind:verification_code_close="handleClose" bind:verification_code_back="handleBack" bind:verification_code_send="handleSend" bind:verification_code_confirm="handleConfirm" />
+
+        <desc>dialog 弹窗类型</desc>
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisible">弹窗形式</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示</title>
+        <desc>属性：visible，对弹窗类型有效</desc>
+        <mx-verification-code styleType="dialog" visible="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">手机号</title>
+        <desc>属性：phone，对弹窗类型有效</desc>
+        <mx-verification-code styleType="dialog" phone="13100000000" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">验证码位数</title>
+        <desc>属性：digit，默认4位，常见的是4位或6位</desc>
+        <mx-verification-code styleType="dialog" phone="13100000000" digit="{{digit}}" visible="{{visibleDigit}}" />
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleDigit4">4位验证码</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="160rpx" small bind:btn_tap="handleDigit6">6位验证码</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">倒计时秒数</title>
+        <desc>属性：countdown，默认60</desc>
+        <mx-verification-code countdown="120" />
+
+        <mx-verification-code styleType="dialog" visible="{{visibleCountdown}}" countdown="120" />
+
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisibleCountdown">弹窗形式</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否禁用获取验证码按钮</title>
+        <desc>属性：disabled，对表单类型有效</desc>
+        <mx-verification-code styleType="form" disabled="{{true}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">发送/获取验证码 按钮</title>
+        <desc>属性：sendBtnColor，按钮颜色</desc>
+        <mx-verification-code styleType="form" sendBtnColor="#1677FF" />
+
+        <mx-verification-code styleType="dialog" visible="{{visibleSend}}" sendBtnColor="#1677FF" />
+
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisibleSend">弹窗形式</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">确认按钮</title>
+        <desc>属性：confirmBtnText，确认按钮文案，对弹窗类型有效</desc>
+        <desc>属性：confirmBtnColor，确认按钮颜色，对弹窗类型有效</desc>
+        <mx-verification-code styleType="dialog" visible="{{visibleConfirm}}" confirmBtnColor="#1677FF" confirmBtnText="完成" />
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisibleConfirm">弹窗形式</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">光标颜色</title>
+        <desc>属性：cursorColor</desc>
+        <mx-verification-code cursorColor="#1677FF" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">占位文本</title>
+        <desc>属性：placeholder，占位文本</desc>
+        <desc>属性：placeholderColor，占位文本颜色</desc>
+        <mx-verification-code placeholder="请输入" placeholderColor="#1677FF" />
+    </wrap>
+    <line />
+
+     <wrap>
+        <title type="h2">标签文本位置</title>
+        <desc>属性：labelPosition，inline 内联 / block 独占一行</desc>
+        <mx-verification-code labelPosition="block" label="短信验证码" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文本</title>
+        <desc>属性：label，标签文本</desc>
+        <desc>属性：labelColor，标签文本文本色</desc>
+        <desc>属性：labelAlign，对齐方式，left / center / right</desc>
+        <mx-verification-code label="短信验证码" labelColor="#1677FF" />
+        <mx-verification-code label="短信验证码" leftWidth="200" labelAlign="center" />
+        <mx-verification-code label="短信验证码" leftWidth="200" labelAlign="right" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文本自定义宽度</title>
+        <desc>属性：leftWidth，标签文本宽度</desc>
+        <mx-verification-code label="短信验证码" leftWidth="200" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否必填</title>
+        <desc>属性：required</desc>
+        <mx-verification-code label="短信验证码" required />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">必填星号位置</title>
+        <desc>属性：requiredPosition：left / right</desc>
+        <mx-verification-code label="短信验证码" required requiredPosition="left" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签前自定义图标</title>
+        <desc>属性：firstIcon 图标配置</desc>
+        <mx-verification-code label="短信验证码" firstIcon="{{firstIcon}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签前自定义图片</title>
+        <desc>属性：firstIcon 图标配置</desc>
+        <mx-verification-code label="短信验证码" firstIcon="{{firstIcon2}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签后自定义图标</title>
+        <desc>属性：lastIcon 图标配置</desc>
+        <mx-verification-code label="短信验证码" lastIcon="{{lastIcon}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签后自定义图片</title>
+        <desc>属性：lastIcon 图标配置</desc>
+        <mx-verification-code label="短信验证码" lastIcon="{{lastIcon2}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述</title>
+        <desc>属性：desc，描述内容</desc>
+        <desc>属性：descColor，描述文本色</desc>
+        <mx-verification-code label="验证码" desc="这是描述内容哦" descColor="#1677FF" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示分隔线</title>
+        <desc>属性：showLine</desc>
+        <mx-verification-code label="验证码" showLine="{{true}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:verification_code_send，发送/获取验证码 按钮点击事件回调</desc>
+        <desc>事件：bind:verification_code_close，弹窗关闭回调</desc>
+        <desc>事件：bind:verification_code_back，弹窗返回回调</desc>
+        <desc>事件：bind:verification_code_confirm，验证码输入完成回调，返回code字段</desc>
+        <desc>事件：bind:verification_code_firstIcon，标签前按钮点击回调</desc>
+        <desc>事件：bind:verification_code_lastIcon，标签后按钮点击回调</desc>
+        
+        <mx-verification-code label="弹窗类型事件" visible="{{visibleHandle}}" styleType="dialog" bind:verification_code_send="handleSend" bind:verification_code_confirm="handleConfirm" bind:verification_code_close="handleClose" bind:verification_code_back="handleBack" />
+
+        <mx-verification-code label="表单类型事件" styleType="form" lastIcon="{{lastIcon}}" firstIcon="{{firstIcon}}"  bind:verification_code_send="handleSend" bind:verification_code_confirm="handleConfirm" bind:verification_code_firstIcon="handleFirstIcon" bind:verification_code_lastIcon="handleLastIcon" />
+
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisibleHandle">弹窗形式</mx-btn>
+        </view>
+    </wrap>
+    <line />
+</view>

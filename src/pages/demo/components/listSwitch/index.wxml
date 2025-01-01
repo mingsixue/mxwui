@@ -1,0 +1,119 @@
+<view class="pageDemo">
+    <mx-nav title="开关列表组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>开关列表组件（示例）</title>
+    <desc>组件名称：ListSwitch</desc>
+    <desc>常用于个人中心、设置等有开关列表的场景。</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基本用法</title>
+        <mx-list-switch label="标签文本" bind:list_switch_change="handleSwitchChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文本</title>
+        <desc>属性：label</desc>
+        <desc>属性：labelColor</desc>
+        <desc>属性：labelAlign，对齐方式，left / center / right</desc>
+
+        <mx-list-switch label="标签文本" />
+        <mx-list-switch label="标签文本" labelColor="#CA0E2D" />
+        <mx-list-switch label="标签文本：" leftWidth="280" labelAlign="center" />
+        <mx-list-switch label="标签文本：" leftWidth="280" labelAlign="right" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">左侧自定义宽度</title>
+        <desc>属性：leftWidth</desc>
+
+        <mx-list-switch label="左侧自定义宽度" leftWidth="280" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否必填</title>
+        <desc>属性：required</desc>
+        <desc>属性：requiredPosition</desc>
+
+        <mx-list-switch label="标签文本" required />
+        <mx-list-switch label="标签文本" required requiredPosition="left" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签前图标</title>
+        <desc>属性：firstIcon</desc>
+
+        <mx-list-switch label="标签前图标" firstIcon="{{firstIcon}}" />
+
+        <mx-list-switch label="标签前图标自定义" firstIcon="{{firstIcon2}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签后图标</title>
+        <desc>属性：lastIcon</desc>
+
+        <mx-list-switch label="标签后图标" lastIcon="{{lastIcon}}" />
+
+        <mx-list-switch label="标签后图标自定义" lastIcon="{{lastIcon2}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">Switch选中</title>
+        <desc>属性：checked</desc>
+
+        <mx-list-switch label="选中" checked="{{true}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">Switch禁用</title>
+        <desc>属性：disabled</desc>
+
+        <mx-list-switch label="禁用" disabled="{{true}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">Switch颜色</title>
+        <desc>属性：switchColor</desc>
+
+        <mx-list-switch label="自定义颜色" checked switchColor="#CA0E2D" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述</title>
+        <desc>属性：desc</desc>
+        <desc>属性：descColor</desc>
+
+        <mx-list-switch label="标签文本" desc="描述内容描述内容描述内容" arrows />
+
+        <mx-list-switch label="标签文本" desc="描述内容描述内容描述内容" descColor="#CA0E2D" arrows />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示分隔线</title>
+        <desc>属性：showLine</desc>
+
+        <mx-list-switch label="标签文本" showLine="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:list_switch_firstIcon，标签前图标点击</desc>
+        <desc>事件：bind:list_switch_lastIcon，标签后图标点击</desc>
+        <desc>事件：bind:list_switch_change，Switch开关事件</desc>
+
+        <mx-list-switch label="事件" firstIcon="{{firstIcon}}" lastIcon="{{lastIcon}}" arrows bind:list_switch_firstIcon="handleFirstIcon" bind:list_switch_lastIcon="handleLastIcon" bind:list_switch_change="handleSwitchChange" />
+    </wrap>
+    <line />
+
+</view>

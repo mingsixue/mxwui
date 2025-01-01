@@ -1,0 +1,27 @@
+<view class="colorDemo">
+    <mx-nav title="UI规范" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+
+    <view class="wrap">
+        <view class="area">
+            <view class="title">规范适用性</view>
+            <view class="desc">规范作为常规设计标准，为组件提供设计依据，MXWUI 基于统一的规范进行设计，包括颜色、字号、边框、边距、圆角、图标等都有一定的规范。</view>
+        </view>
+
+        <view class="area">
+            <view class="title">设计分辨率</view>
+            <view class="desc">规范基于 375*812px(@1x) 作为标准进行设计产出。</view>
+        </view>
+
+        <view class="area">
+            <view class="title">具体规范</view>
+            <view class="cons">
+                <view class="btn" wx:for="{{rule}}" wx:key="name" bind:tap="handleGo" data-item="{{item}}">
+                    <mx-btn class="btn" type="default">{{item.name}}</mx-btn>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <menus current="3" />
+</view>

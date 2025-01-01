@@ -1,0 +1,161 @@
+<view class="pageDemo">
+    <mx-nav title="吸底按钮组组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>吸底按钮组组件（示例）</title>
+    <desc>组件名称：footBtns</desc>
+    <desc>适用于固定在底部的按钮组场景，支持一个按钮、两个按钮、图标+按钮、自定义+按钮等样式。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">样式类型</title>
+        <desc>属性：styleType：single 单按钮 / double 双按钮 / combination 图标按钮组合 / custom 左侧自定义+按钮</desc>
+        
+        <view class="demos" wx:if="{{visibleSingle}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="single" mainBtnText="主要按钮" bind:foot_btns_main="handleMain" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleDouble}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="double" mainBtnText="主要按钮" minorBtnText="辅助按钮" bind:foot_btns_main="handleMain" bind:foot_btns_minor="handleMinor" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCustom}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="custom" mainBtnText="主要按钮" bind:foot_btns_main="handleMain">
+                    左侧自定义内容哦
+                </mx-foot-btns>
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination1}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" leftIcons="{{leftIcons1}}" bind:foot_btns_main="handleMain" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination2}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" mainBtnDisabled="{{true}}" leftIcons="{{leftIcons2}}" bind:foot_btns_main="handleMain" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination3}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" leftIcons="{{leftIcons3}}" bind:foot_btns_main="handleMain" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination4}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" minorBtnText="次按钮" leftIcons="{{leftIcons1}}" bind:foot_btns_main="handleMain" bind:foot_btns_minor="handleMinor" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination5}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" minorBtnText="次按钮" minorBtnDisabled="{{true}}" leftIcons="{{leftIcons2}}" bind:foot_btns_main="handleMain" bind:foot_btns_minor="handleMinor" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination6}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" minorBtnText="次按钮" minorBtnType="primary" minorBtnColor="#C2996C" leftIcons="{{leftIcons3}}" bind:foot_btns_main="handleMain" bind:foot_btns_minor="handleMinor" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+
+        <view class="demos" wx:if="{{visibleCombination7}}">
+            <mx-mask visible="{{true}}" bind:mask_tap="handleClose" opacity="0.1" />
+            <view style="position: relative; z-index: 525;">
+                <mx-foot-btns styleType="combination" mainBtnText="主按钮" minorBtnText="次按钮" bind:foot_btns_main="handleMain" bind:foot_btns_minor="handleMinor" bind:foot_btns_icon="handleIcon" />
+            </view>
+        </view>
+        
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisibleSingle">单按钮</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="140rpx" small bind:btn_tap="handleVisibleDouble">双按钮</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="280rpx" small bind:btn_tap="handleVisibleCustom">左侧自定义+单按钮</mx-btn>
+        </view>
+        <desc>图标按钮组合</desc>
+        <view class="cons">
+            <mx-btn width="200rpx" small bind:btn_tap="handleVisibleCombination1">1图标+主按钮</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="200rpx" small bind:btn_tap="handleVisibleCombination2">2图标+主按钮</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="200rpx" small bind:btn_tap="handleVisibleCombination3">3图标+主按钮</mx-btn>
+        </view>
+        <view class="cons">
+            <mx-btn width="220rpx" small bind:btn_tap="handleVisibleCombination4">1图标+主次按钮</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="220rpx" small bind:btn_tap="handleVisibleCombination5">2图标+主次按钮</mx-btn>
+        </view>
+        <view class="cons">
+            <mx-btn width="220rpx" small bind:btn_tap="handleVisibleCombination6">3图标+主次按钮</mx-btn>
+            <view class="space"></view>
+            <mx-btn width="240rpx" small bind:btn_tap="handleVisibleCombination7">无图标+主次按钮</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">主按钮</title>
+        <desc>属性：mainBtnText，主按钮文案</desc>
+        <desc>属性：mainBtnType，主按钮类型，primary / default / ghost</desc>
+        <desc>属性：mainBtnColor，主按钮颜色</desc>
+        <desc>属性：mainBtnDisabled，主按钮是否禁用</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">辅助按钮</title>
+        <desc>属性：minorBtnText，辅助按钮文案</desc>
+        <desc>属性：minorBtnType，辅助按钮类型，primary / default / ghost</desc>
+        <desc>属性：minorBtnColor，辅助按钮颜色</desc>
+        <desc>属性：minorBtnDisabled，辅助按钮是否禁用</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">左侧图标组配置</title>
+        <desc>属性：leftIcons，图标组配置，最多3个</desc>
+        <desc>属性：leftIcons[x].iconName，图标名称</desc>
+        <desc>属性：leftIcons[x].iconColor，图标颜色</desc>
+        <desc>属性：leftIcons[x].iconUrl，自定义图片地址</desc>
+        <desc>属性：leftIcons[x].iconSize，图标/图片大小</desc>
+        <desc>属性：leftIcons[x].text，文本</desc>
+        <desc>属性：leftIcons[x].textColor，文本颜色</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:foot_btns_main，主按钮点击事件</desc>
+        <desc>事件：bind:foot_btns_minor，辅助按钮点击事件</desc>
+        <desc>事件：bind:foot_btns_icon，图标点击事件，返回图标的 item 和 index</desc>
+    </wrap>
+    <line />
+
+</view>

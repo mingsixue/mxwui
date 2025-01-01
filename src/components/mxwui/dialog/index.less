@@ -1,0 +1,62 @@
+@import url('@common/common.less');
+.mx-dialog{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .mx-dialog-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 572rpx;
+        padding-top: 48rpx;
+        background: @WHITE_COLOR;
+        border-radius: 4rpx;
+        .mx-dialog-title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32rpx;
+            height: 52rpx;
+            color: @TEXT_COLOR;
+            font-size: 36rpx;
+            font-weight: bold;
+        }
+        .mx-dialog-cons{
+            display: block;
+            width: 492rpx;
+            min-height: 144rpx;
+            max-height: 720rpx;
+            overflow-y: auto;
+            margin: 0 auto 48rpx;
+        }
+        .mx-dialog-msgs{
+            font-size: 28rpx;
+            color: @TEXT_COLOR;
+            line-height: 48rpx;
+            text-align: justify;
+        }
+        .mx-dialog-bnts{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 2rpx solid @BORDER_COLOR;
+            .btn{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 96rpx;
+                font-size: 36rpx;
+                cursor: pointer;
+            }
+            .btn-minor{
+                box-sizing: content-box;
+                border-right: 2rpx solid @BORDER_COLOR;
+            }
+        }
+    }
+}

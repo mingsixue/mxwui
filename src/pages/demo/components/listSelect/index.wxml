@@ -1,0 +1,149 @@
+<view class="pageDemo">
+    <mx-nav title="列表选择组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>列表选择组件（示例）</title>
+    <desc>组件名称：ListSelect</desc>
+    <desc>列表形式的选择组件，支持单选和多选。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">类型</title>
+        <desc>属性：type：single 单选、multiple 多选</desc>
+
+        <desc>single 单选</desc>
+        <mx-list-select options="{{options}}" type="single" bind:list_select_change="handleChange" />
+        <line />
+        <desc>multiple 多选</desc>
+        <mx-list-select options="{{options}}" type="multiple" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">数据项</title>
+        <desc>属性：options</desc>
+        <desc>属性：options[x].text</desc>
+        <desc>属性：options[x].value</desc>
+        <desc>属性：options[x].checked：true / false</desc>
+        <desc>属性：options[x].disabled：true / false</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单选框样式</title>
+        <desc>属性：singleIcon：default / radio</desc>
+
+        <desc>default 默认样式</desc>
+        <mx-list-select options="{{options}}" type="single" singleIcon="default" bind:list_select_change="handleChange" />
+        <line />
+        <desc>radio 样式</desc>
+        <mx-list-select options="{{options}}" type="single" singleIcon="radio" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">复选框样式</title>
+        <desc>属性：singleIcon：default / checkbox</desc>
+
+        <desc>default 默认样式</desc>
+        <mx-list-select options="{{options}}" type="multiple" multipleIcon="default" bind:list_select_change="handleChange" />
+        <line />
+        <desc>checkbox 样式</desc>
+        <mx-list-select options="{{options}}" type="multiple" multipleIcon="checkbox" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单选框 / 复选框颜色</title>
+        <desc>属性：iconColor</desc>
+        <mx-list-select options="{{options}}" type="single" singleIcon="default" iconColor="#1677FF" bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" type="single" singleIcon="radio" iconColor="#1677FF" bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" type="multiple" multipleIcon="default" iconColor="#1677FF" bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" type="multiple" multipleIcon="checkbox" iconColor="#1677FF" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">单选框 / 复选框大小</title>
+        <desc>属性：iconSize，默认 48</desc>
+        <mx-list-select options="{{options}}" type="single" singleIcon="default" iconSize="30" bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" type="single" singleIcon="radio" iconSize="30" bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" type="multiple" multipleIcon="default" iconSize="30" bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" type="multiple" multipleIcon="checkbox" iconSize="30" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">文本颜色</title>
+        <desc>属性：textColor，未选中文本颜色</desc>
+        <desc>属性：textSelectColor，选中文本颜色</desc>
+        <mx-list-select options="{{options}}" textColor="#1677FF" textSelectColor="#CA0E2D" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">描述或错误文案</title>
+        <desc>属性：desc</desc>
+        <desc>属性：descColor</desc>
+
+        <mx-list-select options="{{options}}" desc="请先选择选项" descColor="#CA0E2D" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文案</title>
+        <desc>属性：label</desc>
+        <desc>属性：labelColor</desc>
+
+        <mx-list-select options="{{options}}" label="标签文案" labelColor="#1677FF" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示必填星号</title>
+        <desc>属性：required</desc>
+        <desc>属性：requiredPosition：left、right</desc>
+
+        <mx-list-select options="{{options}}" label="必填星号在右侧" required bind:list_select_change="handleChange" />
+        <line />
+        <mx-list-select options="{{options}}" label="必填星号在左侧" required requiredPosition="left" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签前图标</title>
+        <desc>属性：firstIcon</desc>
+
+        <mx-list-select options="{{options}}" label="自定义图标" firstIcon="{{firstIcon}}" bind:list_select_change="handleChange" bind:list_select_firstIcon="handleFirstIcon" />
+        <line />
+        <mx-list-select options="{{options}}" label="自定义图片" firstIcon="{{firstIcon2}}"  bind:list_select_change="handleChange" bind:list_select_firstIcon="handleFirstIcon" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签后图标</title>
+        <desc>属性：lastIcon</desc>
+
+        <mx-list-select options="{{options}}" label="自定义图标" lastIcon="{{lastIcon}}" bind:list_select_change="handleChange" bind:list_select_lastIcon="handleLastIcon" />
+        <line />
+        <mx-list-select options="{{options}}" label="自定义图片" lastIcon="{{lastIcon2}}"  bind:list_select_change="handleChange" bind:list_select_lastIcon="handleLastIcon" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">背景色</title>
+        <desc>属性：bgColor</desc>
+
+        <mx-list-select options="{{options}}" bgColor="#eee" bind:list_select_change="handleChange" />
+    </wrap>
+    <line />
+</view>

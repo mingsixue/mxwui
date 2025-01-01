@@ -1,0 +1,84 @@
+<button
+    wx:if="{{ openType === 'launchApp'}}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="launchApp"
+    app-parameter="{{ appParameter }}"
+    binderror="{{ openType === 'launchApp' ? 'error' : '' }}"
+    bindlaunchapp="{{ openType === 'launchApp' ? 'launchApp' : '' }}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'getUserInfo'}}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="getUserInfo"
+    lang="{{ lang }}"
+    bindgetuserinfo="{{ openType === 'getUserInfo' ? 'getUserInfo' : '' }}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'chooseAvatar'}}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="chooseAvatar"
+    bindchooseavatar="{{ openType === 'chooseAvatar' ? 'chooseAvatar' : ''}}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'getPhoneNumber' || openType === 'getRealtimePhoneNumber' }}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="{{ openType || '' }}"
+    bindgetphonenumber="{{openType === 'getPhoneNumber' ? 'getPhoneNumber' : ''}}"
+    bindgetRealtimePhoneNumber="{{openType === 'getRealtimePhoneNumber' ? 'getRealtimePhoneNumber' : ''}}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'openSetting' }}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="openSetting"
+    bindopensetting="{{ openType === 'openSetting' ? 'openSetting' : '' }}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'agreePrivacyAuthorization' }}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="agreePrivacyAuthorization"
+    bindagreeprivacyauthorization="{{ openType === 'agreePrivacyAuthorization' ? 'agreePrivacyAuthorization' : ''}}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'share' }}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="share"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:elif="{{ openType === 'contact' }}"
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    open-type="contact" sessionFrom="{{sessionFrom}}" sendMessageTitle="{{sendMessageTitle}}" sendMessagePath="{{sendMessagePath}}" sendMessageImg="{{sendMessageImg}}" showMessageCard="{{showMessageCard}}"
+    bindcontact="{{ openType === 'contact' ? 'handleContact' : ''}}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>
+<button
+    wx:else
+    class="mxbtn mxbtn-{{ type }} {{unclickable ? 'mxbtn-unClick' : ''}} {{ disabled ? 'mxbtn-disabled' : '' }} {{round ? 'mxbtn-round' : ''}} {{small ? 'mxbtn-small' : ''}}"
+    hover-class="{{themeColor  ? 'none' : 'mxbtn-hover'}}"
+    bindtap="{{ unclickable || disabled ? '' : 'handleTap' }}"
+    style="width:{{ width ? width : (small ? '132rpx' : '702rpx') }}; {{ customStyle }}"
+>
+    <slot></slot>
+</button>

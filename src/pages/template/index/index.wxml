@@ -1,0 +1,14 @@
+<view class="pageDemo">
+    <mx-nav title="使用示例" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+
+    <view class="wrap">
+        <mx-list-basic label="表单案例一" bind:tap="handleGo" data-url="/pages/template/form/one/index" />
+        <mx-list-basic label="表单案例二：横向布局" bind:tap="handleGo" data-url="/pages/template/form/two/index" />
+        <mx-list-basic label="表单案例三：纵向布局" bind:tap="handleGo" data-url="/pages/template/form/three/index" />
+        <mx-list-basic label="表单案例四：web风格 纵向布局" bind:tap="handleGo" data-url="/pages/template/form/four/index" />
+        <mx-list-basic label="表单案例五：web风格 横向布局" bind:tap="handleGo" data-url="/pages/template/form/five/index" />
+        <mx-list-basic label="表单案例六" bind:tap="handleGo" data-url="/pages/template/form/six/index" />
+    </view>
+    <menus current="2" />
+</view>

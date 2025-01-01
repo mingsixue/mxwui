@@ -1,0 +1,40 @@
+@import url('@common/common.less');
+.mx-dialog-head{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 104rpx;
+    .left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 96rpx;
+        height: 104rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        width: 96rpx;
+        height: 104rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 104rpx;
+        font-size: 36rpx;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: @TEXT_COLOR;
+    }
+}

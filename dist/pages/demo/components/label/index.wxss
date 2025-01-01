@@ -1,0 +1,1 @@
+.pageDemo{min-height:calc(100vh - 36px - 66px);padding-top:66px;padding-bottom:36px;background:#f2f2f2}.pageDemo .cons{margin:0 24rpx;display:flex;align-items:center;flex-wrap:wrap}.pageDemo .cons .item{margin-right:24rpx;margin-bottom:24rpx}

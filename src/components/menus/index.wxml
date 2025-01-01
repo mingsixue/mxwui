@@ -1,0 +1,1 @@
+<mx-menu options="{{options}}" current="{{current}}" />

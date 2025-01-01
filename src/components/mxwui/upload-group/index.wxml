@@ -1,0 +1,7 @@
+<view class="mx-upload-group">
+    <view class="upload-group-wrap upload-group-column{{column}}">
+        <view class="item" wx:for="{{limit}}" wx:key="*this" style="width:{{width}}rpx;height:{{width}}rpx;">
+            <mx-upload width="{{width}}" small="{{column > 4 ? true : false}}" />
+        </view>
+    </view>
+</view>

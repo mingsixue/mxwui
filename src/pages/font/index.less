@@ -1,0 +1,127 @@
+.fontDemo{
+    min-height: calc(100vh - 36px - 66px);
+    padding-top: 66px;
+    padding-bottom: 68rpx;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 68rpx);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 68rpx);
+    background: #fff;
+    .wrap{
+        margin: 0 36rpx 48rpx;
+        .title{
+            margin-bottom: 24rpx;
+            font-size: 40rpx;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: bold;
+            color: #212121;
+        }
+        .desc{
+            margin-bottom: 24rpx;
+            color: #656979;
+        }
+    }
+    .area{
+        margin-top: 48rpx;
+        
+        .default{
+            .default-title{
+                display: flex;
+                align-items: center;
+                font-size: 36rpx;
+                font-weight: bold;
+                &:before{
+                    content: '';
+                    width: 8rpx;
+                    height: 30rpx;
+                    margin-right: 16rpx;
+                    background: #CA0E2D;
+                }
+            }
+            .default-font{
+                display: flex;
+                align-items: center;
+                margin-top: 24rpx;
+            }
+            .default-item{
+                flex: 1;
+            }
+        }
+        .font-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24rpx;
+            .item{
+                flex: 1;
+                margin-right: 20rpx;
+                &:last-child{
+                    margin-right: 0rpx;
+                }
+            }
+        }
+        .example{
+            height: 200rpx;
+            border: 2rpx solid #9AA0B1;
+            border-radius: 4rpx;
+            .text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 12rpx;
+                height: 130rpx;
+                color: #212121;
+                font-size: 60rpx;
+                border-bottom: 2rpx solid #e6e6e6;
+            }
+            .font{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 70rpx;
+                color: #212121;
+                font-size: 30rpx;
+            }
+        }
+        .txt{
+            margin-top: 24rpx;
+            font-size: 32rpx;
+            font-family: PingFangSC-Semibold, PingFang SC;
+            font-weight: bold;
+            color: #656979;
+            text-align: center;
+        }
+    }
+    .wrap-size{
+        margin: 0 0 48rpx;
+        .title{
+            margin-left: 36rpx;
+            margin-bottom: 24rpx;
+            font-size: 40rpx;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: bold;
+            color: #212121;
+        }
+    }
+    .size{
+        .row{
+            margin-bottom: 24rpx;
+            background: #f8f9fa;
+        }
+        .row-durk{
+            background: #040A23;
+            .item{
+                color: #fff;
+            }
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            text-indent: 24rpx;
+            height: 100rpx;
+            color: #040a23;
+            border-bottom: 2rpx solid rgba(204,204,204,.2);
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}

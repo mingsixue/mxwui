@@ -1,0 +1,28 @@
+<view class="mx-search">
+    <view class="mx-search-wrap">
+        <view wx:if="{{showBack}}" class="back" bind:tap="handleBack">
+            <mx-icon name="back" color="{{backColor}}" size="48" />
+        </view>
+        <view class="input-wrap" style="background:{{bgColor}};">
+            <view wx:if="{{showSearchIcon}}" class="search-icon">
+                <mx-icon name="search" color="{{searchIconColor}}" size="{{searchIconSize}}" />
+            </view>
+            <view wx:if="{{keyword && keywordVisible}}" class="keywords">
+                <view class="keyword" style="background:{{keywordBgColor || '#FFF'}};">
+                    <view class="text" style="color:{{keywordColor}};">{{keyword}}</view>
+                    <view class="close" bind:tap="handleCloseKeyword">
+                        <mx-icon name="close" color="{{keywordColor}}" size="30" />
+                    </view>
+                </view>
+            </view>
+            <view class="inputs">
+                <input class="input" type="text" value="{{value}}" cursor-color="{{cursorColor}}" placeholder="{{placeholder}}" placeholder-style="color:{{placeholderColor}};" confirm-type="search" bind:input="handleInput" />
+                <view wx:if="{{showClear && value}}" class="clear" bind:tap="handleClear">
+                    <mx-icon name="close_fill" color="{{PLACEHOLDER_COLOR}}" size="40" />
+                </view>
+                <view wx:if="{{styleType == 'insert' && showBtn}}" class="btn-insert" style="color:{{btnColor}};"  bind:tap="handleBtn">{{btnText}}</view>
+            </view>
+        </view>
+        <view wx:if="{{styleType == 'normal' && showBtn}}" class="btn" style="color:{{btnColor}};" bind:tap="handleBtn">{{btnText}}</view>
+    </view>    
+</view>

@@ -1,0 +1,41 @@
+<view class="mx-calendar" wx:if="{{visible}}" style="z-index:{{zIndex}};">
+    <mx-mask visible="{{true}}" zIndex="1" bind:mask_tap="handleMask" />
+    <view class="mx-calendar-cons">
+        <view class="titles">
+            <view class="cancel" bind:tap="handleCancel" style="{{cancelColor ? 'color:'+cancelColor+';' : ''}}">{{cancelText}}</view>
+            <view class="title">{{title}}</view>
+            <view class="confirm" bind:tap="handleConfirm" style="{{confirmColor ? 'color:'+confirmColor+';' : ''}}">{{confirmText}}</view>
+        </view>
+        <view class="tools">
+            <view class="prev">
+                <view class="prevYear" bind:tap="handlePrevYear">
+                     <mx-icon name="prev" size="38" />
+                </view>
+                <view class="prevMonth" bind:tap="handlePrevMonth">
+                    <mx-icon name="arrows_left" size="38" />
+                </view>
+            </view>
+            
+            <picker mode="date" value="{{currentYearMonth}}" fields="month" bind:change="handleMonthChange">
+                <view class="month">{{currentMonthStr}}</view>
+            </picker>
+            <view class="next">
+                <view class="nextMonth" bind:tap="handleNextMonth">
+                    <mx-icon name="arrows_right" size="38" />
+                </view>
+                <view class="nextYear" bind:tap="handleNextYear">
+                     <mx-icon name="next" size="38" />
+                </view>
+            </view>
+        </view>
+        <view class="weeks">
+            <view class="week" wx:for="{{weeks}}" wx:key="index">{{item}}</view>
+        </view>
+        <view class="days {{showLunar || showSolarTerm || showFestival ? 'days-lunar' : ''}} {{selectionMode == 'range' ? 'days-range' : ''}}">
+            <view class="day {{!item.day ? 'empty' : ''}} {{item.id == nowStr ? 'now' : ''}} {{item.checked ? 'checked' : ''}} {{item.start ? 'start' : ''}} {{item.end ? 'end' : ''}} {{item.checked && item.start == item.checked && item.end ? 'startend' : ''}} {{item.range ? 'range' : ''}} {{item.disabled ? 'disabled' : ''}} {{item.prev || item.next ? 'unclick' : ''}}" wx:for="{{dayArr}}" wx:key="id" bind:tap="handleDay" data-item="{{item}}" data-idx="{{index}}" data-prev="{{item.prev}}" data-next="{{item.next}}" style="{{item.range ? 'background:'+(item.checked ? THEME_COLOR : bgColor)+';' : ''}}">
+                <view class="txt">{{item.day}}</view>
+                <view wx:if="{{showLunar || showSolarTerm || showFestival}}" class="label {{item.solarTerm ? 'solarTerm' : ''}} {{item.festival ? 'festival' : ''}}">{{item.label}}</view>
+            </view>
+        </view>
+    </view>
+</view>

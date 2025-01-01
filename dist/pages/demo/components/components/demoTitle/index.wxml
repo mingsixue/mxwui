@@ -1,0 +1,1 @@
+<view class="demoTitle {{type}}"><slot></slot></view>

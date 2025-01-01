@@ -1,0 +1,109 @@
+@import url('@common/common.less');
+.mx-nav{
+    position: relative;
+    width: 100vw;
+    &.mx-nav-fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .mx-nav-box{
+        width: 100vw;
+        height: 46px;
+        .titles{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 46px;
+        }
+        .title{
+            display: block;
+            margin: 0 auto;
+            max-width: 330rpx;
+            height: 46px;
+            line-height: 46px;
+            font-size: 36rpx;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+            text-align: center;
+        }
+        .titleImg{
+            max-height: 32px;
+        }
+        .leftAction{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            height: 46px;
+            .icons{
+                display: flex;
+                align-items: center;
+                height: 46px;
+                .first-icon{
+                    display: flex;
+                    align-items: center;
+                    padding-left: 24rpx;
+                    padding-right: 24rpx;
+                }
+                .second-icon{
+                    display: flex;
+                    align-items: center;
+                    height: 46px;
+                    padding-left: 24rpx;
+                    padding-right: 24rpx;
+                }
+                .iconImg{
+                    height: 32px;
+                }
+                .secondIconImg{
+                    height: 32px;
+                }
+            }
+            .tits{
+                display: flex;
+                align-items: center;
+            }
+            .tit{
+                display: block;
+                margin: 0 auto;
+                max-width: 330rpx;
+                height: 46px;
+                line-height: 46px;
+                font-size: 36rpx;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: bold;
+                text-align: left;
+            }
+            .titImg{
+                max-height: 32px;
+            }
+        }
+        &.mx-nav-light{
+            .title{
+                color: @TEXT_COLOR;
+            }
+            .leftAction{
+                .tit{
+                    color: @TEXT_COLOR;
+                }
+            }
+        }
+        &.mx-nav-dark{
+            .title{
+                color: @WHITE_COLOR;
+            }
+            .leftAction{
+                .tit{
+                    color: @WHITE_COLOR;
+                }
+            }
+        }
+    }
+}

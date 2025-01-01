@@ -1,0 +1,1 @@
+import{COLOR}from"../utils/common";Component({properties:{level:{type:Number,value:1},bgColor:{type:String,value:COLOR.THEME_COLOR},bgWidth:{type:Number,value:56},bgHeight:{type:Number,value:32},bgRadius:{type:Number,value:16},textColor:{type:String,value:COLOR.WHITE_COLOR},textSize:{type:Number,value:36}}});

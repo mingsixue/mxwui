@@ -1,0 +1,54 @@
+@import url('@common/common.less');
+.mx-label{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 112rpx;
+    height: 72rpx;
+    border-radius: 4rpx;
+    padding: 0 24rpx;
+    background: rgba(154, 160, 177, .1);
+    .text{
+        color: @TEXT_COLOR;
+        font-size: 28rpx;
+    }
+    &.mx-label-single{
+        background: fade(@THEME_COLOR, 10%);
+        .text{
+            color: @THEME_COLOR;
+        }
+    }
+    &.mx-label-multiple{
+        position: relative;
+        background: fade(@THEME_COLOR, 10%);
+        overflow: hidden;
+        .text{
+            color: @THEME_COLOR;
+        }
+        .select{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            width: 0;
+            height: 0;
+            font-size: 0;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 20rpx;
+            height: 20rpx;
+            background: url(http://cdn.mingsixue.com/xcx/MXWUI/multi.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    &.mx-label-disabled{
+        .text{
+            color: @PLACEHOLDER_COLOR!important;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+<view class="mx-label mx-label-{{type}}" style="{{themeColor ? 'background:'+themeColor+';' : ''}}" bind:tap="handleClick">
+    <view class="text" style="{{type == 'default' ? 'color:'+defaultColor+';' : ''}}{{type == 'single' || type == 'multiple' ? 'color:'+selectColor+';' : ''}}">{{text}}</view>
+    <view wx:if="{{type == 'multiple'}}" class="select" style="{{selectColor ? 'border-top:32rpx solid'+selectColor+';border-left:32rpx solid transparent;' : ''}}"></view>
+</view>

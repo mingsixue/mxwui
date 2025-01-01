@@ -1,0 +1,73 @@
+@import url('@common/common.less');
+.mx-textareas{
+    position: relative;
+    .textarea-wrap{
+        padding: 24rpx 24rpx 0 24rpx;
+        background: @WHITE_COLOR;
+        .textarea{
+            width: 100%;
+            caret-color: @THEME_COLOR;
+            color: @TEXT_COLOR;
+            font-size: 32rpx;
+            line-height: 52rpx;
+        }
+    }
+    .limit{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 12rpx 24rpx 12rpx 0;
+        background: @WHITE_COLOR;
+        color: @PLACEHOLDER_COLOR;
+        font-size: 24rpx;
+        text-align: right;
+        .limit-line{
+            margin: 0 8rpx;
+        }
+        .limit-before{
+            color: @PLACEHOLDER_COLOR;
+        }
+        .normalColor{
+            color: @TEXT_COLOR;
+        }
+        .limitColor{
+            color: @THEME_COLOR;
+        }
+    }
+
+    .mx-textarea-web{
+        margin: 24rpx 24rpx 0 24rpx;
+        background: @WHITE_COLOR;
+        border-radius: 8rpx;
+        overflow: hidden;
+    }
+
+    .mx-textarea-web2{
+        margin: 0 24rpx 0 24rpx;
+        background: @WHITE_COLOR;
+        border-radius: 8rpx;
+        overflow: hidden;
+    }
+
+    .web-horizontal{
+        display: flex;
+        align-items: center;
+        margin: 32rpx 24rpx 0 0;
+        .mx-textarea-web2{
+            flex-grow: 1;
+            margin: 0 0 0 0;
+        }
+    }
+
+    .mx-textarea-disabled{
+        opacity: 0.6;
+        .textarea-wrap{
+            .textarea{
+                opacity: 0.6;
+            }
+        }
+        .limit{
+            opacity: 0.6;
+        }
+    }
+}

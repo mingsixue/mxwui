@@ -1,0 +1,122 @@
+@import url('@common/common.less');
+.mx-sale-item{
+    width: 342rpx;
+    height: 100%;
+    background: @WHITE_COLOR;
+    box-shadow: 0rpx 2rpx 8rpx 0rpx rgba(4,10,35,0.03);
+
+    .sale-cover{
+        position: relative;
+        width: 342rpx;
+        height: 342rpx;
+        border-radius: 4rpx 4rpx 0px 0px;
+        overflow: hidden;
+        .cover{
+            display: block;
+            width: 342rpx;
+            height: 342rpx;
+            background: #eee;
+        }
+        .top-left-mark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .top-right-mark{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+        .bottom-left-mark{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .bottom-right-mark{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+        .center-mark{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+    }
+    .sale-infos{
+        padding: 8rpx 16rpx 20rpx 16rpx;
+        border-radius: 0rpx 0rpx 4rpx 4rpx;
+        .infos-title{
+            display: flex;
+            align-items: center;
+            margin-bottom: 8rpx;
+            display: -webkit-box;
+            overflow: hidden;
+            .label{
+                position: relative;
+                top: -3rpx;
+                display: inline;
+                margin-right: 8rpx;
+                padding: 2rpx 6rpx;
+                height: 30rpx;
+                line-height: 30rpx;
+                font-size: 20rpx;
+                text-align: center;
+                border-radius: 4rpx;
+            }
+            .title{
+                display: inline;
+                width: 100%;
+                min-height: 40rpx;
+                font-size: 28rpx;
+            }
+        }
+        .info-tags{
+            margin-bottom: 16rpx;
+            .tag{
+                margin-right: 8rpx;
+            }
+        }
+        .info-price{
+            display: flex;
+            align-items: center;
+            margin-bottom: 8rpx;
+            .unit{
+                margin-right: 4rpx;
+                height: 44rpx;
+                font-size: 32rpx;
+                font-family: Avenir-Heavy, Avenir;
+                font-weight: bold;
+            }
+            .price{
+                height: 44rpx;
+                font-size: 32rpx;
+                font-family: Avenir-Heavy, Avenir;
+                font-weight: bold;
+            }
+            .txt{
+                margin-left: 16rpx;
+                font-size: 24rpx;
+                font-family: PingFangSC-Regular, PingFang SC;
+            }
+        }
+        .btns{
+            .btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 304rpx;
+                height: 44rpx;
+                border-radius: 22rpx;
+                font-size: 24rpx;
+                font-family: PingFangSC-Regular, PingFang SC;
+            }
+        }
+    }
+}

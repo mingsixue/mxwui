@@ -1,0 +1,20 @@
+<view class="mx-lead" wx:if="{{visible}}" style="z-index:{{zIndex}};" bind:tap="handleClose">
+    <view class="lead-con" style="top:{{top}}px;left:{{left}}px;width:{{width}}px;height:{{height}}px;{{showMask ? 'box-shadow: 0 0 0 5000rpx rgba(0, 0, 0, '+opacity+');' : ''}}border-radius:{{radius}}rpx;">
+        <view wx:if="{{text}}" class="lead-tips" style="top:{{tipsTop}}rpx;left:{{tipsLeft}}rpx;width:{{tipsWidth}}rpx;background:{{tipsBgColor}};">
+            <view wx:if="{{tipsIcon.iconName || tipsIcon.iconUrl}}" class="icons">
+                <image wx:if="{{tipsIcon.iconUrl}}" class="icon" mode="widthFix" src="{{tipsIcon.iconUrl}}" style="width:{{tipsIcon.iconWidth || 80}}rpx;height:{{tipsIcon.iconHeight || 80}}rpx;" />
+                <mx-icon wx:else name="{{tipsIcon.iconName}}" color="{{tipsIcon.iconColor || THEME_COLOR}}" size="{{tipsIcon.iconSize || 80}}" />
+            </view>
+            <view class="txt" style="color:{{textColor}};">{{text}}</view>
+            <view class="arrows" style="
+                top:{{tipsArrowsTop}}rpx;
+                left:{{tipsArrowsLeft}}rpx;
+                {{tipsDirection == 'top' ? 'border-bottom:20rpx solid '+tipsBgColor+';border-left:20rpx solid transparent;border-right:20rpx solid transparent;' : ''}}
+                {{tipsDirection == 'bottom' ? 'border-top:20rpx solid '+ tipsBgColor+';border-left:20rpx solid transparent;border-right:20rpx solid transparent;' : ''}}
+                {{tipsDirection == 'right' ? 'border-left:20rpx solid '+ tipsBgColor+';border-top:20rpx solid transparent;border-bottom:20rpx solid transparent;' : ''}}
+                {{tipsDirection == 'left' ? 'border-right:20rpx solid '+ tipsBgColor+';border-top:20rpx solid transparent;border-bottom:20rpx solid transparent;' : ''}}
+            "></view>
+        </view>
+        <slot></slot>
+    </view>
+</view>

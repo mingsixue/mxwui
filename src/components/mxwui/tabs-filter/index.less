@@ -1,0 +1,97 @@
+@import url('@common/common.less');
+.mx-tabs-filter{
+    .mx-tabs-box{
+        position: relative;
+        display: flex;
+        background: @BG_COLOR;
+        .mx-tabs-bar{
+            height: 88rpx;
+            padding-right: 24rpx;
+            padding-left: 24rpx;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .mx-tabs-list{
+            display: flex;
+            align-items: center;
+            height: 88rpx;
+            &.mx-tabs-list-left{
+                justify-content: flex-start;
+            }
+            &.mx-tabs-list-center{
+                justify-content: space-between;
+            }
+        }
+        .mx-tabs-item{
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 56rpx;
+            margin-right: 24rpx;
+            padding: 0 24rpx;
+            background: @WHITE_COLOR;
+            border: 2rpx solid @BORDER_COLOR;
+            box-sizing: content-box;
+            border-radius: 56rpx;
+            &:last-child{
+                margin-right: 0;
+            }
+            &.mx-tabs-item-current{
+                background: @THEME_COLOR;
+                .item-text{
+                    color: @WHITE_COLOR;
+                }
+            }
+            .item-text{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: @TEXT_COLOR;
+                font-size: 28rpx;
+            }
+            .icons{
+                margin-right: 8rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .text{
+                display: inline-block;
+            }
+        }
+
+        &.mx-tabs-light{
+            background: @BG_COLOR;
+            .mx-tabs-item{
+                border: 2rpx solid @BORDER_COLOR;
+                .item-text{
+                    color: @TEXT_COLOR;
+                }
+                &.mx-tabs-item-current{
+                    background: @THEME_COLOR;
+                    .item-text{
+                        color: @WHITE_COLOR;
+                    }
+                }
+            }
+        }
+        &.mx-tabs-durk{
+            background: @THEME_COLOR;
+            .mx-tabs-item{
+                background: transparent;
+                border: 2rpx solid transparent;
+                .item-text{
+                    color: fade(@WHITE_COLOR, 80%)
+                }
+                &.mx-tabs-item-current{
+                    background: @WHITE_COLOR;
+                    .item-text{
+                        color: @THEME_COLOR;
+                    }
+                }
+            }
+        }
+    }
+}

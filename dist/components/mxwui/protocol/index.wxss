@@ -1,0 +1,1 @@
+.mx-protocol{display:flex;align-items:flex-start}.mx-protocol .icon{position:relative;top:4rpx;display:flex;align-items:center;height:40rpx}.mx-protocol .content{display:inline}.mx-protocol .content .text{display:inline;font-size:28rpx;color:#040a23;font-family:PingFangSC-Regular,PingFang SC;line-height:40rpx}

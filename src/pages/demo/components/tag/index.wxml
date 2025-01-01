@@ -1,0 +1,111 @@
+<view class="pageDemo">
+    <mx-nav title="标签组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>标签组件（示例）</title>
+    <desc>组件名称：Tag</desc>
+    <desc>常用于标题后、跟随标题，展示商品的运营信息、辅助信息等。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文案</title>
+        <desc>属性：text</desc>
+        
+        <view class="cons">
+            <mx-tag text="包邮" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签文案文本色</title>
+        <desc>属性：textColor</desc>
+        
+        <view class="cons">
+            <mx-tag text="包邮" textColor="#ff7816" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签边框颜色</title>
+        <desc>属性：borderColor</desc>
+        
+        <view class="cons">
+            <mx-tag text="包邮" borderColor="#ff7816" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标签背景色</title>
+        <desc>属性：bgColor</desc>
+        
+        <view class="cons">
+            <mx-tag text="包邮" bgColor="#efba94" />
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">更多示例</title>
+        
+        <view class="cons">
+            <view class="row">
+                <view class="item">
+                    <mx-tag text="热" />
+                </view>
+                <view class="item">
+                    <mx-tag text="包邮" />
+                </view>
+                <view class="item">
+                    <mx-tag text="保证金" />
+                </view>
+                <view class="item">
+                    <mx-tag text="极速退货" />
+                </view>
+                <view class="item">
+                    <mx-tag text="七天无理由" />
+                </view>
+            </view>
+            <view class="row">
+                <view class="item">
+                    <mx-tag text="热" textColor="#C49C71" borderColor="#C49C71" />
+                </view>
+                <view class="item">
+                    <mx-tag text="包邮" textColor="#C49C71" borderColor="#C49C71" />
+                </view>
+                <view class="item">
+                    <mx-tag text="保证金" textColor="#C49C71" borderColor="#C49C71" />
+                </view>
+                <view class="item">
+                    <mx-tag text="极速退货" textColor="#C49C71" borderColor="#C49C71" />
+                </view>
+                <view class="item">
+                    <mx-tag text="七天无理由" textColor="#C49C71" borderColor="#C49C71" />
+                </view>
+            </view>
+            <view class="row">
+                <view class="item">
+                    <mx-tag text="热" textColor="#FFF" borderColor="#CA0E2D" bgColor="#CA0E2D" />
+                </view>
+                <view class="item">
+                    <mx-tag text="包邮" textColor="#FFF" borderColor="#CA0E2D" bgColor="#CA0E2D" />
+                </view>
+                <view class="item">
+                    <mx-tag text="保证金" textColor="#FFF" borderColor="#CA0E2D" bgColor="#CA0E2D" />
+                </view>
+                <view class="item">
+                    <mx-tag text="极速退货" textColor="#FFF" borderColor="#CA0E2D" bgColor="#CA0E2D" />
+                </view>
+                <view class="item">
+                    <mx-tag text="七天无理由" textColor="#FFF" borderColor="#CA0E2D" bgColor="#CA0E2D" />
+                </view>
+            </view>
+        </view>
+    </wrap>
+    <line />
+</view>

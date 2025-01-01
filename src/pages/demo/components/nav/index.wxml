@@ -1,0 +1,118 @@
+<view class="pageDemo">
+    <mx-nav title="顶部导航组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>顶部导航组件（示例）</title>
+    <desc>组件名称：Nav</desc>
+    <desc>标题内容支持居中、居左显示，支持自定义图片</desc>
+    <desc>图标支持自定义颜色、图标、图片、事件</desc>
+    <desc>左侧支持第2个图标</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">基础使用</title>
+        <mx-nav title="页面标题" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">浅色主题（白底黑字）</title>
+        <desc>属性：theme="light"</desc>
+        <mx-nav title="页面标题" theme="light" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">深色主题（主题色白字）</title>
+        <desc>属性：theme="durk"</desc>
+        <mx-nav title="页面标题" theme="durk" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题</title>
+        <desc>属性：title</desc>
+        <mx-nav title="自定义标题" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义标题颜色</title>
+        <desc>属性：titleColor</desc>
+        <mx-nav title="页面标题" titleColor="#00f" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题使用图片</title>
+        <desc>属性：titleImg</desc>
+        <mx-nav titleImg="http://cdn.mingsixue.com/xcx/MXWUI/mxwui.png" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">标题居左</title>
+        <desc>属性：isLeft</desc>
+        <mx-nav title="页面标题" isLeft isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图标</title>
+        <desc>属性：iconName</desc>
+        <mx-nav title="页面标题" iconName="circle_left_fill" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图标颜色</title>
+        <desc>属性：iconColor</desc>
+        <mx-nav title="页面标题" iconName="circle_left_fill" iconColor="#0f0" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义图标事件</title>
+        <desc>属性：isCustomIconHandle</desc>
+        <desc>事件：bind:nav_icon_tap</desc>
+        <mx-nav title="页面标题" isCustomIconHandle bind:nav_icon_tap="iconTap" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">图标使用图片</title>
+        <desc>属性：iconImg</desc>
+        <mx-nav title="页面标题" iconImg="http://cdn.mingsixue.com/xcx/MXWUI/hot.png" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">设置第二个图标</title>
+        <desc>属性：secondIconName、secondIconColor</desc>
+        <desc>事件：bind:nav_second_icon</desc>
+        <mx-nav secondIconName="filter" secondIconColor="#00f" bind:nav_second_icon="secondIconTap" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex，默认：519</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">第二个图标使用图片</title>
+        <desc>属性：secondIconImg</desc>
+        <mx-nav secondIconImg="http://cdn.mingsixue.com/xcx/MXWUI/set.png" bind:nav_second_icon="secondIconTap" isFixed="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">导航透明</title>
+        <desc>设置 title 为空，bgColor 设为 transparent，isHideIcon 设为 false</desc>
+        <mx-nav title="" bgColor="transparent" isHideIcon="{{false}}" isFixed="{{false}}" />
+    </wrap>
+</view>

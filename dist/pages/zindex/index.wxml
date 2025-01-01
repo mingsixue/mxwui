@@ -1,0 +1,1 @@
+<view class="marginDemo"><mx-nav title="层级规范" /><view style="padding-top:{{navHeight}}rpx;"></view> mask的层级为520 nav的层级为519 menu的层级为518 弹窗的默认层级为1，如需遮盖nav和menu则调整zindex大于520即可 </view>

@@ -1,0 +1,32 @@
+<mx-fixed-foot zIndex="{{zIndex}}">
+    <view class="mx-foot-btns">
+        <block wx:if="{{styleType == 'single'}}">
+            <mx-btn type="{{mainBtnType}}" themeColor="{{mainBtnColor}}" disabled="{{mainBtnDisabled}}" bind:tap="handleMain">{{mainBtnText}}</mx-btn>
+        </block>
+        <view wx:elif="{{styleType == 'double'}}" class="double">
+            <mx-btn type="{{minorBtnType}}" themeColor="{{minorBtnColor}}" disabled="{{minorBtnDisabled}}" width="254rpx"  bind:tap="handleMinor">{{minorBtnText}}</mx-btn>
+            <mx-btn type="{{mainBtnType}}" themeColor="{{mainBtnColor}}" disabled="{{mainBtnDisabled}}" width="432rpx"  bind:tap="handleMain">{{mainBtnText}}</mx-btn>
+        </view>
+        <view wx:elif="{{styleType == 'combination'}}" class="combination">
+            <view wx:if="{{leftIcons.length > 0}}" class="iconBar">
+                <view class="icons" wx:for="{{leftIcons}}" wx:key="text" bind:tap="handleIcon" data-item="{{item}}" data-idx="{{index}}">
+                    <image wx:if="{{item.iconUrl}}" class="icon" mode="widthFix" src="{{item.iconUrl}}" style="width:{{item.iconSize}}rpx;height:{{item.iconSize}}rpx;" />
+                    <mx-icon wx:else name="{{item.iconName}}" color="{{item.iconColor || TEXT_COLOR}}" size="{{item.iconSize || 48}}" />
+                    <view class="txt" style="color:{{item.textColor || TEXT_COLOR}};">{{item.text}}</view>
+                </view>
+            </view>
+            <view class="btnBar">
+                <mx-btn wx:if="{{minorBtnText}}" type="{{minorBtnType}}" themeColor="{{minorBtnColor}}" disabled="{{minorBtnDisabled}}" width="{{minorWidth}}" bind:tap="handleMinor">{{minorBtnText}}</mx-btn>
+                <mx-btn type="{{mainBtnType}}" themeColor="{{mainBtnColor}}" disabled="{{mainBtnDisabled}}" width="{{mainWidth}}" bind:tap="handleMain">{{mainBtnText}}</mx-btn>
+            </view>
+        </view>
+        <view wx:elif="{{styleType == 'custom'}}" class="custom">
+            <view class="leftCustom">
+                <slot></slot>
+            </view>
+            <view class="btnBar">
+                <mx-btn type="{{mainBtnType}}" themeColor="{{mainBtnColor}}" disabled="{{mainBtnDisabled}}" width="352rpx"  bind:tap="handleMain">{{mainBtnText}}</mx-btn>
+            </view>
+        </view>
+    </view>
+</mx-fixed-foot>

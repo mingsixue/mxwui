@@ -1,0 +1,69 @@
+@import url('@common/common.less');
+.mxbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88rpx;
+    border-radius: 4rpx;
+    box-sizing: border-box;
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    padding: 0;
+    width: 702rpx;
+    &.mxbtn-primary {
+        color: @WHITE_COLOR;
+        background: @THEME_COLOR;
+        &.mxbtn-hover {
+            background: fade(@THEME_COLOR, 80%);
+        }
+        &.mxbtn-unClick {
+            color: fade(@WHITE_COLOR, 50%);
+            background: fade(@THEME_COLOR, 50%);
+        }
+        &.mxbtn-disabled {
+            background: @PLACEHOLDER_COLOR;
+        }
+    }
+    &.mxbtn-ghost {
+        color: @THEME_COLOR;
+        border: 2rpx solid @THEME_COLOR;
+        background: transparent;
+        &.mxbtn-hover {
+            color: fade(@THEME_COLOR, 80%);
+            border-color: fade(@THEME_COLOR, 70%);
+        }
+        &.mxbtn-unClick {
+            color: fade(@THEME_COLOR, 40%);
+            border-color: fade(@THEME_COLOR, 40%);
+        }
+        &.mxbtn-disabled {
+            color: @PLACEHOLDER_COLOR;
+            border-color: @PLACEHOLDER_COLOR;
+        }
+    }
+    &.mxbtn-default {
+        color: @THEME_COLOR;
+        border: 2rpx solid @THEME_COLOR;
+        background: fade(@THEME_COLOR, 5%);
+        &.mxbtn-hover {
+            color: fade(@THEME_COLOR, 80%);
+            background: fade(@THEME_COLOR, 3%);
+        }
+        &.mxbtn-unClick {
+            color: fade(@THEME_COLOR, 40%);
+            border-color: fade(@THEME_COLOR, 40%);
+        }
+        &.mxbtn-disabled {
+            color: @PLACEHOLDER_COLOR;
+            border-color: @PLACEHOLDER_COLOR;
+            background: fade(@PLACEHOLDER_COLOR, 5%);
+        }
+    }
+    &.mxbtn-round{
+        border-radius: 44rpx;
+    }
+    &.mxbtn-small{
+        height: 56rpx;
+        font-size: 28rpx;
+    }
+}

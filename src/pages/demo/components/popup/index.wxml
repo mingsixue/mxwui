@@ -1,0 +1,94 @@
+<view class="pageDemo">
+    <mx-nav title="侧边弹窗组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>侧边弹窗组件（示例）</title>
+    <desc>组件名称：Popup</desc>
+    <desc>适用于侧边打开弹窗的场景，提供容器，内容完全自定义。</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示弹窗</title>
+        <desc>属性：visible</desc>
+
+        <mx-popup visible="{{false}}">内容</mx-popup>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">类型</title>
+        <desc>属性：type：left / right，默认right</desc>
+
+        <mx-popup visible="{{visible}}" type="{{type}}" bind:popup_close="handleDialogClose">
+            <view class="custom" bind:tap="handleClose">
+                点这里关闭
+            </view>
+        </mx-popup>
+
+        <view class="cons">
+            <mx-btn width="120rpx" small bind:btn_tap="handleLeft">左侧</mx-btn>
+
+            <view class="space"></view>
+
+            <mx-btn width="120rpx" small bind:btn_tap="handleRight">右侧</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">宽度</title>
+        <desc>属性：width，带单位，默认80vw</desc>
+
+        <mx-popup visible="{{visibleWidth}}" type="left" width="{{width}}" bind:popup_close="handleDialogClose">
+            <view class="custom" bind:tap="handleClose">
+                点这里关闭
+            </view>
+        </mx-popup>
+
+        <view class="cons">
+            <mx-btn width="120rpx" small bind:btn_tap="handleWidth">400rpx</mx-btn>
+
+            <view class="space"></view>
+
+            <mx-btn width="120rpx" small bind:btn_tap="handleWidth2">320px</mx-btn>
+
+            <view class="space"></view>
+
+            <mx-btn width="120rpx" small bind:btn_tap="handleWidth3">50%</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex</desc>
+
+        <mx-popup visible="{{false}}" zIndex="2">
+            <view class="custom" bind:tap="handleClose">
+                点这里关闭
+            </view>
+        </mx-popup>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">蒙层是否可以关闭弹窗</title>
+        <desc>属性：isCloseMask</desc>
+        <desc>事件：bind:popup_close</desc>
+
+        <mx-popup visible="{{visibleMask}}" isCloseMask="{{isCloseMask}}" bind:popup_close="handleDialogClose">
+            <view class="custom" bind:tap="handleClose">
+                点这里关闭
+            </view>
+        </mx-popup>
+
+        <view class="cons">
+            <mx-btn width="140rpx" small bind:btn_tap="handleMask">不可关闭</mx-btn>
+
+            <view class="space"></view>
+
+            <mx-btn width="120rpx" small bind:btn_tap="handleMask2">可关闭</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+</view>

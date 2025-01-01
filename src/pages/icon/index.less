@@ -1,0 +1,43 @@
+.marginDemo{
+    min-height: calc(100vh - 36px - 66px);
+    padding-top: 66px;
+    padding-bottom: 68rpx;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 68rpx);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 68rpx);
+    background: #fff;
+    .txt{
+        margin: 0 24rpx 24rpx 24rpx;
+    }
+    .wrap{
+        margin: 0 0 48rpx;
+        .title{
+            display: flex;
+            align-items: center;
+            margin: 0 24rpx;
+            margin-bottom: 24rpx;
+            font-size: 40rpx;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: bold;
+            color: #212121;
+            &:before{
+                content: '';
+                width: 8rpx;
+                height: 30rpx;
+                margin-right: 16rpx;
+                background: #CA0E2D;
+            }
+        }
+        .desc{
+            margin: 0 24rpx 24rpx 24rpx;
+            color: #656979;
+        }
+        .model{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150rpx;
+            margin: 0 24rpx 24rpx 24rpx;
+            color: #fff;
+        }
+    }
+}

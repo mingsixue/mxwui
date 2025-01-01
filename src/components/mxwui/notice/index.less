@@ -1,0 +1,146 @@
+@import url('@common/common.less');
+.mx-notice{
+    width: 100vw;
+    .mx-notice-wrap{
+        background: @NOTICE_COLOR;
+        
+        &.mx-notice-default{
+            padding: 20rpx 24rpx;
+            .first-icon{
+                float: left;
+                margin-right: 10rpx;
+            }
+            .contents{
+                display: inline;
+            }
+            .text{
+                display: inline;
+                color: @WHITE_COLOR;
+                font-size: 28rpx;
+                line-height: 40rpx;
+            }
+
+            &.mx-notice-ellipsis{
+                display: flex;
+                align-items: center;
+                .first-icon{
+                    float: none;
+                    flex-shrink: 0;
+                }
+                .contents{
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                    max-width: 650rpx;
+                }
+                .text-ellipsis{
+                    flex: 1;
+                    flex-grow: 1;
+                    display: inline-block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &.mx-notice-roll{
+            padding: 20rpx 24rpx;
+            height: 44rpx;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            .first-icon{
+                flex-shrink: 0;
+                margin-right: 10rpx;
+            }
+            .contents{
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+            }
+            .contents-marquee{
+                overflow: hidden;
+            }
+            .contents-vertical{
+                position: relative;
+                height: 84rpx;
+                .vertical-cons{
+                    position: relative;
+                    width: 100%;
+                    height: 84rpx;
+                }
+                .vertical-item{
+                    width: 100%;
+                    height: 84rpx;
+                }
+                .text{
+                    width: 660rpx;
+                    height: 84rpx;
+                    line-height: 84rpx;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .text{
+                display: block;
+                color: @WHITE_COLOR;
+                font-size: 28rpx;
+                line-height: 40rpx;
+                white-space: nowrap;
+            }
+        }
+        &.mx-notice-operate{
+            display: flex;
+            align-items: center;
+            padding: 20rpx 24rpx;
+            .first-icon{
+                flex-shrink: 0;
+                padding-right: 16rpx;
+            }
+            .contents{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-grow: 1;
+            }
+            .text{
+                color: @WHITE_COLOR;
+                font-size: 28rpx;
+                line-height: 40rpx;
+            }
+            .text-ellipsis{
+                flex: 3;
+                flex-grow: 1;
+                flex-shrink: 1;
+                width: 540rpx;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .btn{
+                flex-shrink: 0;
+                margin-left: 24rpx;
+            }
+            .last-icon{
+                flex-shrink: 0;
+                margin-left: 24rpx;
+            }
+            &.mx-notice-ellipsis{
+                .btn{
+                    margin-left: 12rpx;
+                    margin-right: 24rpx;
+                }
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(50%);
+    }
+    to {
+        transform: translateX(-100%); /* 从右向左移动 */
+    }
+}

@@ -1,0 +1,178 @@
+<view class="pageDemo">
+    <mx-nav title="通知栏组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>通知栏组件（示例）</title>
+    <desc>组件名称：Notice</desc>
+    <desc>一般用于活动提醒或者系统权限申请等吸引用户关注但又不强制用户去处理的场景。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示</title>
+        <desc>属性：visible</desc>
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行标签文本多行" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">样式分类</title>
+        <desc>属性：styleType：default / operate</desc>
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本多行标签文本多行" />
+
+        <line/>
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" />
+
+        <line/>
+
+        <mx-notice visible="{{true}}" styleType="roll" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">内容</title>
+        <desc>属性：text</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">文本超出是否显示省略号</title>
+        <desc>属性：ellipsis</desc>
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本多行标签文本多行" ellipsis="{{true}}" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本多行标签文本多行" ellipsis="{{true}}" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本多行标签文本多行" arrows="{{true}}" ellipsis="{{true}}" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本多行标签文本多行" ellipsis="{{true}}" showBtn btnText="按钮" btnType="ghost" btnColor="#FFFFFF" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义文本色</title>
+        <desc>属性：textColor</desc>
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行标签文本多行" textColor="#c12a43" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">自定义背景色</title>
+        <desc>属性：bgColor</desc>
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行" bgColor="#c12a43" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" bgColor="rgba(202,14,45,0.1)" textColor="#CA0E2D" iconColor="#CA0E2D" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">图标相关</title>
+        <desc>属性：iconColor，图标颜色</desc>
+        <desc>属性：iconSize，图标大小</desc>
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行" iconColor="#CA0E2D" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" text="多行标签文本多行标签文本多行" iconColor="#CA0E2D" iconSize="40" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否可关闭</title>
+        <desc>属性：showClose</desc>
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{true}}" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{false}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">按钮相关</title>
+        <desc>属性：showBtn，是否显示按钮</desc>
+        <desc>属性：btnText，按钮文案</desc>
+        <desc>属性：btnType，按钮类型：primary、default、ghost</desc>
+        <desc>属性：btnColor，按钮颜色</desc>
+        <desc>属性：btnWidth，按钮宽度，带单位</desc>
+        
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{false}}" showBtn />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{false}}" showBtn btnText="按钮" btnType="default" btnColor="#FFFFFF" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{false}}" showBtn btnText="按钮" btnType="ghost" btnColor="#FFFFFF" btnWidth="130rpx" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否显示箭头</title>
+        <desc>属性：arrows</desc>
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行" showClose="{{false}}" arrows />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{false}}" arrows />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" arrows />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">滚动效果</title>
+        <desc>属性：rollType：vertical垂直滚动 marquee跑马灯效果</desc>
+        <desc>属性：rollSpeed，跑马灯动画时间，默认 8s</desc>
+        <desc>属性：message，多条文本，配合垂直滚动使用</desc>
+        <desc>属性：interval，垂直滚动间隔时间，默认 3000ms，配合垂直滚动使用</desc>
+
+        <mx-notice visible="{{true}}" styleType="roll" rollType="marquee" text="多行标签文本多行标签文本多行标签" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="roll" rollType="marquee" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" />
+
+        <line />
+
+         <mx-notice visible="{{true}}" styleType="roll" rollType="marquee" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" rollSpeed="4s" />
+
+        <line />
+
+        <mx-notice visible="{{true}}" styleType="roll" rollType="vertical" rollSpeed="2s" message="{{message}}" />
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">事件</title>
+        <desc>事件：bind:notice_close，关闭回到事件</desc>
+        <desc>事件：bind:notice_btn，按钮点击事件</desc>
+        <desc>事件：bind:notice_tap，内容点击事件</desc>
+
+        <mx-notice visible="{{true}}" styleType="operate" text="多行标签文本多行标签文本多行标签文本多行多行标签文本多行标签文本" showClose="{{true}}" showBtn bind:notice_close="handleClose" bind:notice_btn="handleBtn" bind:notice_tap="handleTap" />
+    </wrap>
+    <line />
+    
+
+</view>

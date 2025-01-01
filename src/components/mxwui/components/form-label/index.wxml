@@ -1,0 +1,13 @@
+<view wx:if="{{label}}" class="labels labels-{{labelAlign}} {{horizontal ? 'labels-horizontal' : ''}}" style="{{leftWidth ? 'width:'+leftWidth+'rpx;' : ''}}">
+    <view wx:if="{{firstIcon.iconName || firstIcon.iconUrl}}" class="firstIcon" bind:tap="handleFirstClick">
+        <image wx:if="{{firstIcon.iconUrl}}" class="icon" mode="widthFix" src="{{firstIcon.iconUrl}}" style="width:{{firstIcon.iconSize || 48}}rpx;height:{{firstIcon.iconSize || 48}}rpx;" />
+        <mx-icon wx:else name="{{firstIcon.iconName}}" color="{{firstIcon.iconColor || TEXT_COLOR}}" size="{{firstIcon.iconSize || 48}}" />
+    </view>
+    <view wx:if="{{requiredPosition == 'left' && required}}" class="required requiredLeft">*</view>
+    <view class="label" style="color:{{labelColor || TEXT_COLOR}};">{{label}}</view>
+    <view wx:if="{{requiredPosition == 'right' && required}}" class="required requiredRight">*</view>
+    <view wx:if="{{lastIcon.iconName || lastIcon.iconUrl}}" class="lastIcon" bind:tap="handleLastClick">
+        <image wx:if="{{lastIcon.iconUrl}}" class="icon" mode="widthFix" src="{{lastIcon.iconUrl}}" style="width:{{lastIcon.iconSize || 32}}rpx;height:{{lastIcon.iconSize || 32}}rpx;" />
+        <mx-icon wx:else name="{{lastIcon.iconName}}" color="{{lastIcon.iconColor || PLACEHOLDER_COLOR}}" size="{{lastIcon.iconSize || 32}}" />
+    </view>
+</view>

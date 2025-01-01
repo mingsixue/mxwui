@@ -1,0 +1,1 @@
+<mx-dialog visible="{{visible}}" zIndex="{{zIndex}}" title="{{title}}" content="{{content}}" confirmBtnText="{{confirmBtnText}}" confirmBtnColor="{{confirmBtnColor}}" isCloseMask="{{isCloseMask}}" bind:dialog_confirm="handleConfirm" bind:dialog_close="handleClose" />

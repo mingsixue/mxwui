@@ -1,0 +1,1 @@
+import{COLOR,AVATAR}from"../utils/common";Component({properties:{url:{type:String,value:AVATAR},size:{type:Number,value:140},round:{type:Boolean,value:!0},radius:{type:String,value:"4"},borderColor:{type:String,value:COLOR.WHITE_COLOR},borderWeight:{type:Number,value:2}},methods:{handleTap(){this.triggerEvent("avatar_tap")}}});

@@ -1,0 +1,147 @@
+<view class="pageDemo">
+    <mx-nav title="复选框组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>复选框组件（示例）</title>
+    <desc>组件名称：Checkbox</desc>
+    <desc>用于选项之间的选择，一般用于在一组选项中选择多个值。</desc>
+    <line />
+
+    <title type="h2">组件分解示例图片</title>
+    <desc>Todo待补充</desc>
+    <line />
+
+    <wrap>
+        <title type="h2">文案</title>
+        <desc>属性：text</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="标签" bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">文案颜色</title>
+        <desc>属性：textColor</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="标签" textColor="#1677FF" bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否选中</title>
+        <desc>属性：checked</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="选中" checked bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">是否禁用</title>
+        <desc>属性：disabled</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="未选中禁用" disabled bind:checkbox_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-checkbox text="选中禁用" checked disabled bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">复选框位置</title>
+        <desc>属性：checkboxPosition：after / before</desc>
+
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="标签" bind:checkbox_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-checkbox text="标签" checked bind:checkbox_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-checkbox text="标签" disabled bind:checkbox_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-checkbox text="标签" checked disabled bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="标签" checkboxPosition="after" />
+            </view>
+            <view class="item">
+                <mx-checkbox text="标签" checkboxPosition="after" checked />
+            </view>
+            <view class="item">
+                <mx-checkbox text="标签" checkboxPosition="after" disabled />
+            </view>
+            <view class="item">
+                <mx-checkbox text="标签" checkboxPosition="after" checked disabled />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">复选框颜色</title>
+        <desc>属性：checkboxColor，未选中颜色</desc>
+        <desc>属性：checkboxSelectColor，选中颜色</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="未选中颜色自定义" checkboxColor="#000" bind:checkbox_change="handleChange" />
+            </view>
+            <view class="item">
+                <mx-checkbox text="选中颜色自定义" checked checkboxSelectColor="#1677FF" bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">复选框大小</title>
+        <desc>属性：checkboxSize，默认 48</desc>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="自定义大小" checkboxSize="32" checked bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="自定义大小" checkboxSize="60" checked bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox text="自定义大小" checkboxSize="60" disabled bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">只有复选框</title>
+        
+        <view class="cons">
+            <view class="item">
+                <mx-checkbox bind:checkbox_change="handleChange" />
+            </view>
+        </view>
+    </wrap>
+    <line />
+</view>

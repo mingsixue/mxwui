@@ -1,0 +1,151 @@
+@import url('@common/common.less');
+.mx-tabs{
+    .mx-tabs-box{
+        position: relative;
+        display: flex;
+        background: @BG_COLOR;
+        .mx-tabs-bar{
+            height: 80rpx;
+            padding-right: 24rpx;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .mx-tabs-list{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .mx-tabs-item{
+            position: relative;
+            display: inline-block;
+            height: 80rpx;
+            line-height: 80rpx;
+            padding: 0 24rpx;
+            .item-text{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: @MINOR_TEXT_COLOR;
+                font-size: 32rpx;
+            }
+            .item-text-current{
+                color: @TEXT_COLOR;
+                font-weight: bold;
+                .line{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    z-index: 2;
+                    transform: translateX(-50%);
+                    display: block;
+                    width: 32rpx;
+                    height: 8rpx;
+                    background: @THEME_COLOR;
+                }
+                &.item-text-full{
+                    .line{
+                        width: 100%;
+                    }
+                }
+            }
+            .icons{
+                display: inline-block;
+                margin-right: 8rpx;
+            }
+            .text{
+                display: inline-block;
+            }
+            .num{
+                display: inline-block;
+            }
+            .dot{
+                position: absolute;
+                top: 20rpx;
+                right: -14rpx;
+                width: 16rpx;
+                height: 16rpx;
+                background: #CA0E2D;
+                border-radius: 50%;
+                &.dot-durk{
+                    background: @WHITE_COLOR;
+                }
+            }
+            .sort{
+                display: inline-block;
+                width: 32rpx;
+                height: 32rpx;
+                &.sort-default{
+                    background: url(http://cdn.mingsixue.com/xcx/MXWUI/sort_default.png) no-repeat;
+                    background-size: cover;
+                }
+                &.sort-desc{
+                    background: url(http://cdn.mingsixue.com/xcx/MXWUI/sort_desc.png) no-repeat;
+                    background-size: cover;
+                }
+                &.sort-asc{
+                    background: url(http://cdn.mingsixue.com/xcx/MXWUI/sort_asc.png) no-repeat;
+                    background-size: cover;
+                }
+            }
+            .line{
+                display: none;
+            }
+        }
+
+        .mx-tabs-bar-flex{
+            .mx-tabs-item{
+                flex: 1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .shadow{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 48rpx;
+            height: 80rpx;
+            background: url(http://cdn.mingsixue.com/xcx/MXWUI/tabs_shadow.png) no-repeat;
+            background-size: cover;
+        }
+
+        &.mx-tabs-light{
+            background: @BG_COLOR;
+            .mx-tabs-item{
+                .item-text{
+                    color: @MINOR_TEXT_COLOR;
+                }
+                .item-text-current{
+                    color: @TEXT_COLOR;
+                }
+            }
+            .shadow{
+                background: url(http://cdn.mingsixue.com/xcx/MXWUI/tabs_shadow.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        &.mx-tabs-durk{
+            background: @THEME_COLOR;
+            .mx-tabs-item{
+                .item-text{
+                    color: fade(@WHITE_COLOR, 80%);
+                }
+                .item-text-current{
+                    color: @WHITE_COLOR;
+                    .line{
+                        content: '';
+                        background: @WHITE_COLOR;
+                    }
+                }
+            }
+            .shadow{
+                background: url(http://cdn.mingsixue.com/xcx/MXWUI/tabs_shadow_red.png) no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}

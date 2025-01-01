@@ -1,0 +1,49 @@
+<view class="pageDemo">
+    <mx-nav title="Mask 组件" />
+    <view style="padding-top:{{navHeight}}rpx;"></view>
+    <title>Mask组件（示例）</title>
+    <desc>组件名称：Mask</desc>
+    <desc>统一的蒙层组件，常用于弹窗、引导等场景。</desc>
+
+    <wrap>
+        <title type="h2">是否显示蒙层</title>
+        <desc>属性：visible</desc>
+        
+        <mx-mask visible="{{visible}}" bind:mask_tap="handleClick" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisible">查看效果</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">设置透明度</title>
+        <desc>属性：opacity，默认0.6，范围值：0-1</desc>
+        
+        <mx-mask visible="{{visibleOpacity}}" opacity="0.2" bind:mask_tap="handleClick" />
+
+        <view class="cons">
+            <mx-btn width="160rpx" small bind:btn_tap="handleVisibleOpacity">设置透明度</mx-btn>
+        </view>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">层级</title>
+        <desc>属性：zIndex，默认520</desc>
+    </wrap>
+    <line />
+
+    <wrap>
+        <title type="h2">关闭事件</title>
+        <desc>属性：bind:mask_tap</desc>
+        
+        <mx-mask visible="{{visibleMask}}" bind:mask_tap="handleClick" />
+
+        <view class="cons">
+            <mx-btn width="120rpx" small bind:btn_tap="handleVisibleMask">事件</mx-btn>
+        </view>
+    </wrap>
+    <line />
+</view>

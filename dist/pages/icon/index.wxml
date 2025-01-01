@@ -1,0 +1,1 @@
+<view class="marginDemo"><mx-nav title="图标规范" /><view style="padding-top:{{navHeight}}rpx;"></view><view class="txt">图标以 4 的倍数为基准，如 24、32、48 等。</view></view>
